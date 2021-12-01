@@ -1,2 +1,322 @@
 /* ===== YOUR CSS GOES HERE ===== */
 /* ===== START WITH GLOBAL STYLES THEN USE MEDIA QUERIES FOR LAYOUT ADJUSTMENTS ===== */
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+
+}
+html{
+    background-color: #EEEEEE;
+    /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+html,body{
+    height: 100vh;
+}
+.font_bold{
+    font-weight: bold;
+}
+.font_violet{
+    color:#887DD7;
+}
+/* index.html */
+.indexBox{
+    box-sizing: border-box;
+    padding:20px 20px;
+}
+.index_title{
+    font-size: 3rem;
+    text-align: center;
+}
+.index_title .fontBold{
+    font-size: 3.2rem;
+}
+.index_content{
+    width: 100%;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 30px;
+}
+.index_content_main{
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+
+}
+.index_picture{
+    border:1.5px solid #9FA09D;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 6px;
+}
+.index_p_line_left,.index_p_line_right{
+    position: absolute;
+    width: 125%;
+    height: 1.5px;
+    background: #9FA09D;
+}
+.index_p_line_left{
+    transform: rotate(42deg);
+    left: -13%;
+    top: 50%;
+}
+.index_p_line_right{
+    transform: rotate(-42deg);
+    left: -13%;
+    top: 50%;
+}
+.index_button{
+    margin-top: 10%;
+    width: 100%;
+    box-sizing: border-box;
+    padding:18px 0;
+    border-radius: 5px;
+    border: 2px solid #7FBA87;
+    background: white;
+    color:#3657C8;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.index_tips{
+    display: flex;
+    align-items: center;
+}
+.index_icon{
+    transform: rotate(45deg);
+    margin-right: 5px;
+}
+
+
+
+/* TreesPages */
+.chat_box{
+    padding: 30px 15px;
+}
+.chat_head{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+.chat_img{
+    margin-right: 15px;
+}
+.img_trees{
+    width: 30px;
+    margin-top: 10px;
+}
+
+.chat_content{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.chat_bubble_question,.chat_bubble_option{
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 15px;
+    display: inline-block;
+    word-break: break-all;
+    font-size: 1.1rem;
+    font-family: "Microsoft YaHei";
+    word-wrap: break-word;
+    word-break: break-word;
+    position: relative;
+}
+.chat_bubble_question{
+    color: #fff;
+    background: #4DA761;
+    width: 60%;
+    margin-left: 8px;
+    margin-bottom: 50px;
+}
+.chat_bubble_option{
+    color: #000;
+    text-align: center;
+    background: #CFCFCF;
+    align-self:flex-end;
+    padding: 12px 10px;
+    margin-right: 8px;
+    margin-bottom: 15px;
+    width:40%;
+}
+.chat_bubble_question::after{
+    content: "";
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent #4DA761 transparent transparent;
+    left: -15px;
+    top: 20%;
+}
+.chat_bubble_option::after{
+    content: "";
+    position: absolute;
+    right: -15px;
+    top: 20%;
+    height: 0px;
+    width: 0px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent transparent #CFCFCF;
+}
+
+.bubble_width{
+    width: 60%;
+}
+.tree_box{
+    position: relative;
+}
+.hide_trees_bottom{
+    width: 100%;
+    background: #EEEEEE;
+    height: 69%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Satisfy|Pathway+Gothic+One);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+h1,h2,.page1, body,.button {
+  display: grid;
+  place-content: center;
+}
+
+.page0,
+.page1,
+.page2,
+.page3,
+.page4,
+.page5,
+.page6, 
+body, 
+main,
+#quizzie {
+  margin: 0;
+    padding: 0;
+    width: 407px;
+    height: 855px;
+}
+
+body {
+  background: linear-gradient(15deg, #5cbddd, #00adad);
+  color: #fff;
+}
+
+h1,h2,h3,h4{
+  font-family: 'Satisfy', 'cursive';
+  font-size: 2em;
+}
+
+p {
+  font-family: 'Pathway Gothic One', 'sans-serif';
+  font-size: 1.5em;
+}
+
+h3,h4,p {
+    text-align: center;
+    display: block;
+    width: auto;
+    margin: 1%;
+}
+
+#tree0{
+   background-image: url("https://cdn-icons-png.flaticon.com/512/877/877802.png");
+   height: 250px;
+   background-size:250px;
+   background-repeat: no-repeat;
+  margin: 75px;
+  place-content: center;
+}
+
+#tree {
+   background-image: url("https://cdn-icons-png.flaticon.com/512/877/877802.png");
+   height: 80px;
+   background-size:40px;
+   background-repeat: repeat;
+  margin: 25px;
+}
+
+.saving p,
+.co2,
+.avg{
+  background: #4ECB71;
+   border-radius: 6px;
+  padding:5px;
+}
+
+.data p{
+ text-align: left;
+ display: inline-block;
+}
+
+.level{
+  background-color:#4ECB71;
+  padding:15px 0;
+  margin:5px 10px 0 10px;
+}
+
+.level svg{
+  background-image: url("https://l2p-league.com/wp-content/uploads/2019/05/ligi22-300x124.png");
+   background-size:300px;
+   height:118px;
+   background-repeat: no-repeat;
+}
+
+.coffee svg{
+  background-image: url("https://cdn0.iconfinder.com/data/icons/good-morning-1/128/morning_cute_tea_coffee_cup_hot-512.png");
+   background-size:100px;
+   background-repeat: no-repeat;
+}
+
+.car svg{
+  background-image: url("https://cdn1.iconfinder.com/data/icons/family-life-filled-outline/340/travel_car_summer_vacation_trip_road_drive_vehicle_journey_adventure_holiday-512.png");
+   background-size:100px;
+   background-repeat: no-repeat;
+   background-position: right;
+}
+
+.bear svg{
+  background-image: url("https://cdn2.iconfinder.com/data/icons/scenarium-vol-4/128/043_polar_bear_arctic_north_pole_cold-512.png");
+   background-size:100px;
+   background-repeat: no-repeat;
+}
+
+.share{
+   background-color: #F4B400;
+    border: none;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 8px;
+    margin:0 10px;
+}
+
+.again{
+   background-color: #F4B400;
+    border: none;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 8px;
+    margin:10px;
+}
