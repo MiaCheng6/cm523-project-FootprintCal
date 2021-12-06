@@ -3,7 +3,8 @@
 //Quiz
 const options = {
     1:[
-        {label:"Bus",score:100*4*270/10},            {label:"Car",score:300*4*270/10},
+        {label:"Bus",score:100*4*270/10},       
+      {label:"Car",score:300*4*270/10},
         {label:"Metro",score:100*4*270/10},
         {label:"Bike",score:65*4*270/10},
         {label:"Walk",score:0},
@@ -46,7 +47,7 @@ function showTrees(key){
         doms[key-1].style.display = "block";
         document.querySelector(".indexBox").style.display = "none";
     }else{
-        let lastScore = JSON.parse(localStorage.getItem("lastAnswer")||'{}');
+        let lastScore = JSON.parse(localStorage.getItem("lastAnswer")||'{}');//获取上次作答及成绩
         if(lastScore.allScore){
         }
         document.querySelector(".indexBox").style.display = "block";
@@ -56,7 +57,8 @@ function showTrees(key){
 function choose(key,value){
     let answer = JSON.parse(localStorage.getItem("answer")||'{}');
     if(key==5){
-        let fDom = document.getElementsByClassName("chat_content")[key-1];
+        // 多选
+        let fDom = document.getElementsByClassName("chat_content")[key-1];//父元素
         let cDom = fDom.getElementsByClassName("chat_bubble_option");
         answer[key] = answer[key]||[];
         let opIndex = answer[key].indexOf(value);
@@ -68,7 +70,7 @@ function choose(key,value){
         for (let i = 0; i < cDom.length; i++) {
             if(answer[key].indexOf(cDom[i].innerText)==-1){
                 cDom[i].classList.remove("choose_bubble");
-            }else{
+            }else{                    
                 cDom[i].classList.add("choose_bubble");
             }
         }
@@ -111,7 +113,7 @@ const share =  document.querySelector(".share");
 const AllScore =  document.querySelector("#AllScore");
 
 
-//cal the tree number
+//cal the user score
 let answer = JSON.parse(localStorage.getItem("answer")||'{}');
 let allScore = 0;
     for (let i in answer) {
@@ -126,12 +128,21 @@ let allScore = 0;
 answer.allScore = allScore;
 console.log(allScore);
 
+//show allscore
+function ShowAllScore(){
+   AllScore.textContent = allScore/100;
+}
+
+ShowAllScore();
+
+//calculate tree number
 const CO2toTree = 22;
 const AvgCO2 = 234;
 let userSaveCo2 = AvgCO2 - allScore/100;
 
 function calculateTrees(){
-numtree.textContent = Math.round(userSaveCo2 / CO2toTree);
+numtree.textContent = 
+Math.abs(Math.round(userSaveCo2 / CO2toTree));
     }
 calculateTrees();
 
@@ -143,7 +154,6 @@ for (var i = 0; i < numtree.textContent; i++) {
 }
 
 addTrees();
-
 
 //display tree disc
 let bad = 'Oh! You killed';
@@ -159,13 +169,6 @@ function treeDisc() {
 }
 
 treeDisc();
-
-//show allscore
-function ShowAllScore(){
-   AllScore.textContent = allScore/100;
-}
-
-ShowAllScore();
 
 //cal the difference of CO2 between user and avg
 const Percent = 100;
@@ -184,9 +187,9 @@ let middle = '% equals to avg';
 
 function calculateResults() {
     if (userSaveCo2 > 0){
-        desc.textContent = high;
+        desc.textContent = low;
     } else if (userSaveCo2 < 0){
-      desc.textContent = low;
+      desc.textContent = high;
     } else {
   desc.textContent = middle;
 }
@@ -195,24 +198,25 @@ function calculateResults() {
 calculateResults();
 
 // display levels
+let finalscore = allScore/100;
 function calculateLevels() {
-       if ( 404 < userSaveCo2 < 452 ){
-       plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://static.wikia.nocookie.net/leagueoflegends/images/5/5f/Season_2019_-_Challenger_1.png'/><h4>Challenger</h4></div>";
-    }  else if ( 356 < userSaveCo2 < 404 ){
-plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://static.wikia.nocookie.net/leagueoflegends/images/7/76/Season_2019_-_Grandmaster_1.png'/><h4>Grandmaster</h4>";
-    }  else if ( 308 < userSaveCo2 < 356 ){
-plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://static.wikia.nocookie.net/leagueoflegends/images/1/11/Season_2019_-_Master_1.png'/><h4>Master</h4>";
-    } else if ( 260 < userSaveCo2 < 308 ){
+       if ( 0 < finalscore < 68){
+        plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://static.wikia.nocookie.net/leagueoflegends/images/5/5f/Season_2019_-_Challenger_1.png'/><h4>Challenger</h4></div>";
+    }  else if ( 68 < finalscore < 116 ){
+        plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://static.wikia.nocookie.net/leagueoflegends/images/7/76/Season_2019_-_Grandmaster_1.png'/><h4>Grandmaster</h4>";
+    }  else if ( 116 < finalscore < 164 ){
+        plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://static.wikia.nocookie.net/leagueoflegends/images/1/11/Season_2019_-_Master_1.png'/><h4>Master</h4>";
+    } else if ( 212 < finalscore < 260 ){
        plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://static.wikia.nocookie.net/leagueoflegends/images/9/91/Season_2019_-_Diamond_1.png'/><h4>Bright diamond</h4>";
-    } else if ( 212 < userSaveCo2 < 260 ){
+    } else if ( 260 < finalscore < 308 ){
        plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://static.wikia.nocookie.net/leagueoflegends/images/7/74/Season_2019_-_Platinum_1.png'/><h4>Luxurious platinum</h4>";
-    } else if ( 164 < userSaveCo2 < 212 ){
+    } else if ( 164 < finalscore < 212 ){
        plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://static.wikia.nocookie.net/leagueoflegends/images/9/96/Season_2019_-_Gold_1.png'/><h4>The glory of the gold</h4>";
-    } else if ( 116 < userSaveCo2 < 164 ){
+    } else if ( 308 < finalscore < 356 ){
        plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://static.wikia.nocookie.net/leagueoflegends/images/7/70/Season_2019_-_Silver_1.png'/><h4>Unyielding Silver</h4>";
-    } else if ( 68 < userSaveCo2 < 116 ){
+    } else if ( 356 < finalscore < 404 ){
        plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://static.wikia.nocookie.net/leagueoflegends/images/f/f4/Season_2019_-_Bronze_1.png'/><h4>The heroic bronze</h4>";
-    } else {
+    } else{
        plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://static.wikia.nocookie.net/leagueoflegends/images/0/03/Season_2019_-_Iron_1.png'/><h4>Iron</h4>";
     }
 }
@@ -231,7 +235,7 @@ layout = {
 polar: {
 radialaxis: {
   visible: true,
-  range: [0, 50]
+  range: [0, 100]
 }
 },
 showlegend: false
@@ -244,7 +248,7 @@ Plotly.newPlot("radarchart", data, layout)
 const CO2toCoffee = 0.00738;
 
 function calculateCoffee(){
-numcoffee.textContent = Math.round(userSaveCo2 / CO2toCoffee);
+numcoffee.textContent = Math.abs(Math.round(userSaveCo2 / CO2toCoffee));
     }
 calculateCoffee();
 
@@ -253,7 +257,7 @@ const CO2toCar = 6.4;
 const CO2toKwh = 0.43;
 
 function calculateCars(){
-numcar.textContent = Math.round((userSaveCo2 / CO2toKwh) * CO2toCar);
+numcar.textContent = Math.abs(Math.round((userSaveCo2 / CO2toKwh) * CO2toCar));
     }
 calculateCars();
 
@@ -261,7 +265,7 @@ calculateCars();
 const KwhtoPhone = 0.015;
 
 function calculateChargePhone(){
-numphone.textContent = Math.round((userSaveCo2 / CO2toKwh) / KwhtoPhone);
+numphone.textContent = Math.abs((Math.round((userSaveCo2 / CO2toKwh) / KwhtoPhone)));
     }
 calculateChargePhone();
 

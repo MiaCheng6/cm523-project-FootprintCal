@@ -13,17 +13,11 @@ html{
     font-family:'Satisfy','cursive','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #fff;
 }
-  
-/*main{
-  background-color: white;
-  width: 100%;
-}
-*/
 
 html,body{
-    margin: auto;
+    margin: 0 auto;
     padding: 0;
-}
+    width:100%}
 
 .font_bold{
     font-weight: bold;
@@ -37,15 +31,15 @@ html,body{
     padding:20px 20px;
 }
 .index_title p{
-    font-size: 5rem;
+    font-size: 8vw;
     text-align: center;
+    margin: 0.5em 0 0.3em 0;
 }
 
 .index_content{
     width: 100%;
-    font-size: 1.2rem;
+    font-size: 2.5vw;
     text-align: center;
-    margin-top: 30px;
 }
 .index_content_main{
     margin: 0 auto;
@@ -86,7 +80,7 @@ html,body{
     top: 50%;
 }
 .index_button{
-    margin: 25px auto;
+    margin: 0.5em 0 2em 0;
     width: 250px;
     box-sizing: border-box;
     padding:15px 0;
@@ -116,11 +110,6 @@ html,body{
 
 
 /* TreesPages */
-.chat_box{
-    padding: 30px 15px;
-}
-
-
 .chat_head{
     display: flex;
     align-items: center;
@@ -192,6 +181,9 @@ html,body{
     border-color: transparent transparent transparent white;
 }
 
+.chat_bubble_option:hover {
+  border-bottom: 4px solid #F4B400;
+} 
 .choose_bubble{
     background: skyblue;
     color:#fff;
@@ -211,7 +203,7 @@ html,body{
 
 /*Results*/
 .indexBox, .chat_box, #quizzie {
-    margin: auto;
+    margin: 2em auto;
     padding: 0;
     width: 800px;
     align-self: center;
@@ -363,12 +355,23 @@ align-self: center;
    align-self: center;
 }
 
+#playagain{
+   background-color: #F4B400;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2em;
+    margin: 0 auto;
+    font-family: 'Pathway Gothic One', 'sans-serif';
+}
+
 .buttons{
   margin: 2em 0 4em 0;
   width: 700px;
 }
 
-@media screen and (min-width: 50px) and (max-width: 800px){
+@media screen and (min-width: 10px) and (max-width: 800px){
   
 .indexBox,
 .chat_box,
@@ -389,13 +392,15 @@ main,
 }
 
   .index_title p{
-    font-size: 4rem;
+    font-size: 10vw;
     text-align: center;
     width: 407px;
     align-self: center;
-    margin: 0.5em auto;
+    margin: 0.3em 0;
 }
-  
+  .index_content {
+    font-size: 20px;
+  } 
 
 h1,h2,h3,h4{
   font-family: 'Satisfy', 'cursive';
@@ -418,6 +423,11 @@ h3{
     margin: 1em 0;
   }
 
+  
+ .index_picture{
+   background-size: 100%;
+   margin: -2em auto;}
+  
 .saving p,
 #diffavg,
 #numcoffee,
