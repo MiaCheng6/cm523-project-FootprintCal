@@ -46,7 +46,7 @@ function showTrees(key){
         doms[key-1].style.display = "block";
         document.querySelector(".indexBox").style.display = "none";
     }else{
-        let lastScore = JSON.parse(localStorage.getItem("lastAnswer")||'{}');//获取上次作答及成绩
+        let lastScore = JSON.parse(localStorage.getItem("lastAnswer")||'{}');
         if(lastScore.allScore){
         }
         document.querySelector(".indexBox").style.display = "block";
@@ -56,44 +56,37 @@ function showTrees(key){
 function choose(key,value){
     let answer = JSON.parse(localStorage.getItem("answer")||'{}');
     if(key==5){
-        // 多选
-        let fDom = document.getElementsByClassName("chat_content")[key-1];//父元素
-        let cDom = fDom.getElementsByClassName("chat_bubble_option");//当前所有选项元素
-        answer[key] = answer[key]||[];//没值就赋值成数组 避免数组操作报错
+        let fDom = document.getElementsByClassName("chat_content")[key-1];
+        let cDom = fDom.getElementsByClassName("chat_bubble_option");
+        answer[key] = answer[key]||[];
         let opIndex = answer[key].indexOf(value);
-        if(opIndex!=-1){ //indexOf查找 找到元素为下标 找不到为-1；判断是否已选择;
-            answer[key].splice(opIndex,1);//找到了从数组中删掉
+        if(opIndex!=-1){ 
+            answer[key].splice(opIndex,1);
         }else{
-            answer[key].push(value);//找不到就往数组中添加
+            answer[key].push(value);
         }
         for (let i = 0; i < cDom.length; i++) {
             if(answer[key].indexOf(cDom[i].innerText)==-1){
-                // 没选择的选项
                 cDom[i].classList.remove("choose_bubble");
             }else{
-                // 选择的选项
                 cDom[i].classList.add("choose_bubble");
             }
         }
     }else{
-        // 单选
         answer[key] = [value];
         this.showTrees(key+1);
     }
-    localStorage.setItem("answer",JSON.stringify(answer));//添加到缓存
+    localStorage.setItem("answer",JSON.stringify(answer));
 }
 function submit(){
-    // 提交
     let answer = JSON.parse(localStorage.getItem("answer")||'{}');
     let allScore = 0;
     for (let i in answer) {
         if(i==5){
-            // 多选
             for (let j = 0; j < answer[i].length; j++) {
                 allScore+= options[i].find(item=>item.label==answer[i][j]).score;
             }
         }else{
-            // 单选
             allScore += options[i].find(item=>item.label==answer[i][0]).score;
         }
     }
@@ -123,12 +116,10 @@ let answer = JSON.parse(localStorage.getItem("answer")||'{}');
 let allScore = 0;
     for (let i in answer) {
         if(i==5){
-            // 多选
             for (let j = 0; j < answer[i].length; j++) {
                 allScore+= options[i].find(item=>item.label==answer[i][j]).score;
             }
         }else{
-            // 单选
             allScore += options[i].find(item=>item.label==answer[i][0]).score;
         }
     }

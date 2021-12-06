@@ -2,7 +2,6 @@
 /* ===== START WITH GLOBAL STYLES THEN USE MEDIA QUERIES FOR LAYOUT ADJUSTMENTS ===== */
 @import url(https://fonts.googleapis.com/css?family=Satisfy|Pathway+Gothic+One);
 
-
 *,
 *::before,
 *::after {
@@ -521,13 +520,10 @@ h3{
   margin: 2em 0 3em 0;
   width: 350px;
 }
-}
 
 .chat_bubble_option:hover {
   border-bottom: 4px solid #F4B400;
-} {
-  
-}
+} 
 
 #playagain{
    background-color: #F4B400;
@@ -538,4 +534,5 @@ h3{
     font-size: 2em;
     margin: 0 auto;
     font-family: 'Pathway Gothic One', 'sans-serif';
+}
 }
