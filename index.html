@@ -1,337 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- PUT A TITLE IN HERE -->
-    <title>Your Project Title</title>
-    <!-- PUT A DESCRIPTION IN HERE -->
-    <meta name="description" content="describe content of the page here...." />
-    <!-- LINK TO NORMALIZE (FOR CONSISTENCY) -->
-    <link rel="stylesheet" href="styles.normalize.css" />
-    <!-- LINK TO ANY FRAMEWORK STYLES HERE-->
-    <!-- LINK TO YOUR STYLES -->
-    <link rel="stylesheet" href="styles/styles.css" />
-    <!-- LINK TO EXTERNAL JS LIBRARIES HERE -->
-    <!-- LINK TO YOUR JS HERE. NOTE THE DEFER ATTRIBUTE. -->
-    <script src="scripts/scripts.js" defer></script>
-  </head>
-  <body>
-    <!-- YOUR HTML GOES HERE -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,intial-scale=1.0,user-scalable=no">
+    <title>Trees Home</title>
+    <link rel="stylesheet" href="./css/global.css">
+</head>
+  
+<body>
+    <div>
 
-    <html lang="en">
-      <head>
-          <meta charset="UTF-8">
-          <meta http-equiv="X-UA-Compatible" content="IE=edge">
-          <meta name="viewport" content="width=device-width,intial-scale=1.0,user-scalable=no">
-          <title>Trees Home</title>
-          <link rel="stylesheet" href="./css/global.css">
-      </head>
-      <body>
-          <div class="indexBox">
-              <div class="index_title">
-                  <p>How many</p>
-                  <p>trees can you</p>
-                  <p class="font_bold">save?</p>
-              </div>
-              <div class="index_content">
-                      <p>Carbon Footprint Calculator</p>
-                      <div class="index_content_main">
-                          <div class="font_bold font_violet index_tips">
-                              <span class="index_icon">
-                                  
-                              </span>
-                          </div>
-                          <div class="index_picture">
-                              <p class="index_p_line_left"></p>
-                              <p class="index_p_line_right"></p>
-                          </div>
-                          <div>
-                              <button class="index_button" onclick="goToTrees()">Play</button>
-                              <button class="index_button">How to play?</button>
-                          </div>
-                      </div>
-              </div>
-      
-          </div>
-      </body>
-      <script>
-          function goToTrees(){
-              window.location.href = "./trees.html?trees=1"
-          }
-      </script>
-        
-        <head>
-          <meta charset="UTF-8">
-          <meta http-equiv="X-UA-Compatible" content="IE=edge">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Trees</title>
-          <link rel="stylesheet" href="./css/global.css">
-      </head>
-      <body>
-          <div>
-              <!-- page1 -->
-              <div class="chat_box">
-                  <div class="chat_head">
-                      <div class="chat_img">
-                          <svg t="1638268120987" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4077" width="64" height="64"><path d="M511.333 63.333c-247.424 0-448 200.576-448 448s200.576 448 448 448 448-200.576 448-448-200.576-448-448-448z m0 832c-51.868 0-102.15-10.144-149.451-30.15-36.011-15.231-69.123-35.67-98.812-60.897 12.177-31.985 42.226-63.875 84.223-88.903C396.189 686.243 456.222 669.53 512 669.53c55.631 0 115.416 16.658 164.026 45.703 41.762 24.953 71.689 56.812 83.863 88.804-29.764 25.342-62.976 45.865-99.106 61.146-47.299 20.006-97.582 30.15-149.45 30.15z m296.268-139.658c-20.493-35.937-54.353-68.855-98.747-95.381C649.75 624.979 579.839 605.53 512 605.53c-67.964 0-138.094 19.488-197.471 54.875-44.644 26.606-78.656 59.594-99.195 95.586-23.835-28.755-43.234-60.652-57.85-95.208-20.006-47.3-30.15-97.583-30.15-149.451s10.144-102.15 30.15-149.451c19.337-45.719 47.034-86.792 82.321-122.078 35.286-35.287 76.359-62.983 122.078-82.321 47.3-20.006 97.583-30.15 149.451-30.15 51.868 0 102.15 10.144 149.451 30.15 45.719 19.337 86.792 47.034 122.078 82.321 35.287 35.286 62.983 76.359 82.321 122.078 20.006 47.3 30.15 97.583 30.15 149.451s-10.144 102.15-30.15 149.451c-14.563 34.429-33.869 66.22-57.583 94.892z" fill="#B6B6B6" p-id="4078"></path><path d="M512 220.223c-88.224 0-160 71.776-160 160s71.776 160 160 160c88.225 0 160-71.775 160-160s-71.775-160-160-160z m0 256c-52.935 0-96-43.065-96-96s43.065-96 96-96 96 43.065 96 96-43.065 96-96 96z" fill="#B6B6B6" p-id="4079"></path></svg>
-                      </div>
-                      <div>
-                          <p>My trees</p>
-                          <div class="tree_box">
-                              <div class="hide_trees_bottom"></div>
-                              <img src="./images/tree.png" alt="" class="img_trees">
-                          </div>
-                      </div>
-                  </div>
-                  <div class="chat_content">
-                          <div class="chat_bubble_question">
-                              What transportation do you usually take?
-                          </div>
-                          <div class="chat_bubble_option" onclick="choose(1,1)">
-                              Bus
-                          </div>
-                          <div class="chat_bubble_option" onclick="choose(1,2)">
-                              Car
-                          </div>
-                          <div class="chat_bubble_option" onclick="choose(1,3)">
-                              Metro
-                          </div>
-                          <div class="chat_bubble_option" onclick="choose(1,4)">
-                              Bike
-                          </div>
-                          <div class="chat_bubble_option" onclick="choose(1,5)">
-                              Walk
-                          </div>
-                  </div>
-              </div>
-      
-      
-              <!-- page2 -->
-              <div class="chat_box">
-                  <div class="chat_head">
-                      <div class="chat_img">
-                          <svg t="1638268120987" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4077" width="64" height="64"><path d="M511.333 63.333c-247.424 0-448 200.576-448 448s200.576 448 448 448 448-200.576 448-448-200.576-448-448-448z m0 832c-51.868 0-102.15-10.144-149.451-30.15-36.011-15.231-69.123-35.67-98.812-60.897 12.177-31.985 42.226-63.875 84.223-88.903C396.189 686.243 456.222 669.53 512 669.53c55.631 0 115.416 16.658 164.026 45.703 41.762 24.953 71.689 56.812 83.863 88.804-29.764 25.342-62.976 45.865-99.106 61.146-47.299 20.006-97.582 30.15-149.45 30.15z m296.268-139.658c-20.493-35.937-54.353-68.855-98.747-95.381C649.75 624.979 579.839 605.53 512 605.53c-67.964 0-138.094 19.488-197.471 54.875-44.644 26.606-78.656 59.594-99.195 95.586-23.835-28.755-43.234-60.652-57.85-95.208-20.006-47.3-30.15-97.583-30.15-149.451s10.144-102.15 30.15-149.451c19.337-45.719 47.034-86.792 82.321-122.078 35.286-35.287 76.359-62.983 122.078-82.321 47.3-20.006 97.583-30.15 149.451-30.15 51.868 0 102.15 10.144 149.451 30.15 45.719 19.337 86.792 47.034 122.078 82.321 35.287 35.286 62.983 76.359 82.321 122.078 20.006 47.3 30.15 97.583 30.15 149.451s-10.144 102.15-30.15 149.451c-14.563 34.429-33.869 66.22-57.583 94.892z" fill="#B6B6B6" p-id="4078"></path><path d="M512 220.223c-88.224 0-160 71.776-160 160s71.776 160 160 160c88.225 0 160-71.775 160-160s-71.775-160-160-160z m0 256c-52.935 0-96-43.065-96-96s43.065-96 96-96 96 43.065 96 96-43.065 96-96 96z" fill="#B6B6B6" p-id="4079"></path></svg>
-                      </div>
-                      <div>
-                          <p>My trees</p>
-                          <div class="tree_box">
-                              <div class="choose_hide"></div>
-                              <img src="./images/tree.png" alt="" class="img_trees">
-                              <img src="./images/tree.png" alt="" class="img_trees">
-                          </div>
-                      </div>
-                  </div>
-                  <div class="chat_content">
-                          <div class="chat_bubble_question">
-                              Do you buy mostly local products?
-                          </div>
-                          <div class="chat_bubble_option bubble_width" onclick="choose(2,1)">
-                              Always
-                          </div>
-                          <div class="chat_bubble_option bubble_width" onclick="choose(2,2)">
-                              Sometimes
-                          </div>
-                          <div class="chat_bubble_option bubble_width" onclick="choose(2,3)">
-                              Not considering this option
-                          </div>
-                  </div>
-              </div>
-      
-              <!-- page3 -->
-              <div class="chat_box">
-                  <div class="chat_head">
-                      <div class="chat_img">
-                          <svg t="1638268120987" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4077" width="64" height="64"><path d="M511.333 63.333c-247.424 0-448 200.576-448 448s200.576 448 448 448 448-200.576 448-448-200.576-448-448-448z m0 832c-51.868 0-102.15-10.144-149.451-30.15-36.011-15.231-69.123-35.67-98.812-60.897 12.177-31.985 42.226-63.875 84.223-88.903C396.189 686.243 456.222 669.53 512 669.53c55.631 0 115.416 16.658 164.026 45.703 41.762 24.953 71.689 56.812 83.863 88.804-29.764 25.342-62.976 45.865-99.106 61.146-47.299 20.006-97.582 30.15-149.45 30.15z m296.268-139.658c-20.493-35.937-54.353-68.855-98.747-95.381C649.75 624.979 579.839 605.53 512 605.53c-67.964 0-138.094 19.488-197.471 54.875-44.644 26.606-78.656 59.594-99.195 95.586-23.835-28.755-43.234-60.652-57.85-95.208-20.006-47.3-30.15-97.583-30.15-149.451s10.144-102.15 30.15-149.451c19.337-45.719 47.034-86.792 82.321-122.078 35.286-35.287 76.359-62.983 122.078-82.321 47.3-20.006 97.583-30.15 149.451-30.15 51.868 0 102.15 10.144 149.451 30.15 45.719 19.337 86.792 47.034 122.078 82.321 35.287 35.286 62.983 76.359 82.321 122.078 20.006 47.3 30.15 97.583 30.15 149.451s-10.144 102.15-30.15 149.451c-14.563 34.429-33.869 66.22-57.583 94.892z" fill="#B6B6B6" p-id="4078"></path><path d="M512 220.223c-88.224 0-160 71.776-160 160s71.776 160 160 160c88.225 0 160-71.775 160-160s-71.775-160-160-160z m0 256c-52.935 0-96-43.065-96-96s43.065-96 96-96 96 43.065 96 96-43.065 96-96 96z" fill="#B6B6B6" p-id="4079"></path></svg>
-                      </div>
-                      <div>
-                          <p>My trees</p>
-                          <div class="tree_box">
-                              <div class="choose_hide"></div>
-                              <img src="./images/tree.png" alt="" class="img_trees">
-                              <img src="./images/tree.png" alt="" class="img_trees">
-                              <img src="./images/tree.png" alt="" class="img_trees">
-                          </div>
-                      </div>
-                  </div>
-                  <div class="chat_content">
-                          <div class="chat_bubble_question">
-                              Do you usually use air conditioning or heating?
-                          </div>
-                          <div class="chat_bubble_option" onclick="choose(3,1)">
-                              Yes
-                          </div>
-                          <div class="chat_bubble_option" onclick="choose(3,2)">
-                              No
-                          </div>
-                  </div>
-              </div>
-      
-              <!-- page4 -->
-              <div class="chat_box">
-                  <div class="chat_head">
-                      <div class="chat_img">
-                          <svg t="1638268120987" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4077" width="64" height="64"><path d="M511.333 63.333c-247.424 0-448 200.576-448 448s200.576 448 448 448 448-200.576 448-448-200.576-448-448-448z m0 832c-51.868 0-102.15-10.144-149.451-30.15-36.011-15.231-69.123-35.67-98.812-60.897 12.177-31.985 42.226-63.875 84.223-88.903C396.189 686.243 456.222 669.53 512 669.53c55.631 0 115.416 16.658 164.026 45.703 41.762 24.953 71.689 56.812 83.863 88.804-29.764 25.342-62.976 45.865-99.106 61.146-47.299 20.006-97.582 30.15-149.45 30.15z m296.268-139.658c-20.493-35.937-54.353-68.855-98.747-95.381C649.75 624.979 579.839 605.53 512 605.53c-67.964 0-138.094 19.488-197.471 54.875-44.644 26.606-78.656 59.594-99.195 95.586-23.835-28.755-43.234-60.652-57.85-95.208-20.006-47.3-30.15-97.583-30.15-149.451s10.144-102.15 30.15-149.451c19.337-45.719 47.034-86.792 82.321-122.078 35.286-35.287 76.359-62.983 122.078-82.321 47.3-20.006 97.583-30.15 149.451-30.15 51.868 0 102.15 10.144 149.451 30.15 45.719 19.337 86.792 47.034 122.078 82.321 35.287 35.286 62.983 76.359 82.321 122.078 20.006 47.3 30.15 97.583 30.15 149.451s-10.144 102.15-30.15 149.451c-14.563 34.429-33.869 66.22-57.583 94.892z" fill="#B6B6B6" p-id="4078"></path><path d="M512 220.223c-88.224 0-160 71.776-160 160s71.776 160 160 160c88.225 0 160-71.775 160-160s-71.775-160-160-160z m0 256c-52.935 0-96-43.065-96-96s43.065-96 96-96 96 43.065 96 96-43.065 96-96 96z" fill="#B6B6B6" p-id="4079"></path></svg>
-                      </div>
-                      <div>
-                          <p>My trees</p>
-                          <div class="tree_box">
-                              <div class="choose_hide"></div>
-                              <img src="./images/tree.png" alt="" class="img_trees">
-                              <img src="./images/tree.png" alt="" class="img_trees">
-                              <img src="./images/tree.png" alt="" class="img_trees">
-                              <img src="./images/tree.png" alt="" class="img_trees">
-                          </div>
-                      </div>
-                  </div>
-                  <div class="chat_content">
-                          <div class="chat_bubble_question">
-                              How many times do you eat out per day?
-                          </div>
-                          <div class="chat_bubble_option" onclick="choose(4,1)">
-                              One
-                          </div>
-                          <div class="chat_bubble_option" onclick="choose(4,2)">
-                              Two
-                          </div>
-                          <div class="chat_bubble_option" onclick="choose(4,3)">
-                              Three or more
-                          </div>
-                  </div>
-              </div>
-      
-              <!-- page5 -->
-              <div class="chat_box">
-                  <div class="chat_head">
-                      <div class="chat_img">
-                          <svg t="1638268120987" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4077" width="64" height="64"><path d="M512 220.223c-88.224 0-160 71.776-160 160s71.776 160 160 160c88.225 0 160-71.775 160-160s-71.775-160-160-160z m0 256c-52.935 0-96-43.065-96-96s43.065-96 96-96 96 43.065 96 96-43.065 96-96 96z" fill="#B6B6B6" p-id="4079"></path></svg>
-                      </div>
-                      <div>
-                          <p>My trees</p>
-                          <div class="tree_box">
-                              <div class="choose_hide"></div>
-                              <img src="./images/tree.png" alt="" class="img_trees">
-                              <img src="./images/tree.png" alt="" class="img_trees">
-                              <img src="./images/tree.png" alt="" class="img_trees">
-                              <img src="./images/tree.png" alt="" class="img_trees">
-                              <img src="./images/tree.png" alt="" class="img_trees">
-                          </div>
-                      </div>
-                  </div>
-                  <div class="chat_content">
-                          <div class="chat_bubble_question">
-                              What waste do you recycle or compost?
-                          </div>
-                          <div class="chat_bubble_option" onclick="choose(5,1)">
-                              Food
-                          </div>
-                          <div class="chat_bubble_option" onclick="choose(5,2)">
-                              Paper
-                          </div>
-                          <div class="chat_bubble_option" onclick="choose(5,3)">
-                              Tin cans
-                          </div>
-                          <div class="chat_bubble_option" onclick="choose(5,4)">
-                              Plastic
-                          </div>
-                          <div class="chat_bubble_option" onclick="choose(5,5)">
-                              Glass
-                          </div>
-                          <div class="chat_bubble_option" onclick="choose(5,6)">
-                              None
-                          </div>
-                  </div>
-              </div>
-      
-          </div>
-        
-        <div id="quizzie">
-        <h3>How many trees can you save?</h3>
-        
-          <ul id="results">
-             <div class="saving">
-                <p>Congrats! You saved
-                  <span class="numtree">
-                  </span>
-                trees a day!
-                </p>
-                <div id="tree">
+        <!-- index -->
+        <div class="indexBox">
+            <div class="index_title">
+                <p>How many trees can you <strong>SAVE?</strong></p>
             </div>
-           </div>
-                
-                <div class="data">
-                <p>
-                You producted 
-                  <span class="co2">25kg CO2</span>
-               everyday,
-                <span class="avg">50%</span>
-                less than avg!
-                </p>
+            <div class="index_content">
+                    <p>Carbon Footprint Calculator</p>
+                    <div class="index_content_main">
+                        <div class="font_bold font_violet index_tips">
+                         
+                            
+                        </div>
+                        <div class="index_picture">
+                                     
+                        </div>
+                        <div>
+                            <button class="index_button" onclick="showTrees(1)">Play</button>                          
+                        </div>
+                    </div>
             </div>
-      
-             <div class="level">
-                <p>
-                 Your Planting Level is
-                  <span class="js-level">
-                    <svg> </svg> 
-                       </span>
-               <h4>The glory of the gold</h4>
-                      </p>
+        </div>
+
+
+       <main>
+        <!-- page1 -->
+        <div class="chat_box">
+            <div class="chat_head">
+                <div class="chat_img">
+                    <svg t="1638268120987" class="icon" viewBox="0 0 1024 1024" version="1.1" src="https://wx2.sinaimg.cn/large/007cCWrJgy1gs4qer5jhlj31jk1jk77h.jpg" p-id="4077" width="64" height="64"><path d="M511.333 63.333c-247.424 0-448 200.576-448 448s200.576 448 448 448 448-200.576 448-448-200.576-448-448-448z m0 832c-51.868 0-102.15-10.144-149.451-30.15-36.011-15.231-69.123-35.67-98.812-60.897 12.177-31.985 42.226-63.875 84.223-88.903C396.189 686.243 456.222 669.53 512 669.53c55.631 0 115.416 16.658 164.026 45.703 41.762 24.953 71.689 56.812 83.863 88.804-29.764 25.342-62.976 45.865-99.106 61.146-47.299 20.006-97.582 30.15-149.45 30.15z m296.268-139.658c-20.493-35.937-54.353-68.855-98.747-95.381C649.75 624.979 579.839 605.53 512 605.53c-67.964 0-138.094 19.488-197.471 54.875-44.644 26.606-78.656 59.594-99.195 95.586-23.835-28.755-43.234-60.652-57.85-95.208-20.006-47.3-30.15-97.583-30.15-149.451s10.144-102.15 30.15-149.451c19.337-45.719 47.034-86.792 82.321-122.078 35.286-35.287 76.359-62.983 122.078-82.321 47.3-20.006 97.583-30.15 149.451-30.15 51.868 0 102.15 10.144 149.451 30.15 45.719 19.337 86.792 47.034 122.078 82.321 35.287 35.286 62.983 76.359 82.321 122.078 20.006 47.3 30.15 97.583 30.15 149.451s-10.144 102.15-30.15 149.451c-14.563 34.429-33.869 66.22-57.583 94.892z" fill="#B6B6B6" p-id="4078"></path><path d="M512 220.223c-88.224 0-160 71.776-160 160s71.776 160 160 160c88.225 0 160-71.775 160-160s-71.775-160-160-160z m0 256c-52.935 0-96-43.065-96-96s43.065-96 96-96 96 43.065 96 96-43.065 96-96 96z" fill="#B6B6B6" p-id="4079"></path></svg>
+                </div>
+                <div>
+                    <p>My trees</p>
+                    <div class="tree_box">
+                        <div class=""></div>
+                        <img src="./images/tree.png" alt="" class="img_trees">
+                    </div>
+                </div>
             </div>
-            
-            
-         <canvas class="chart" width="100" height="50">
-         </canvas>
-        
-         <div class="energy">
-                <p>
-                  Saving these energy, You can:</p>
-             
-        <p> 
-          <span class="coffee">
-                    <svg> </svg> </span>
-          Cook <span class="js-coffee"></span> cups of coffee;
-           </p>
-          
-        <p>
-             <span class="car">
-                    <svg> </svg> </span>
-          Drive an electric car <span class="js-car"></span>;
-           </p>
-           
-        <p>
-           <span class="bear">
-                    <svg> </svg> </span>
-          Save <span class="js-bear"></span> polar bears in the Arctic Ocean.</p>
+            <div class="chat_content">
+                    <div class="chat_bubble_question">
+                        What transportation do you usually take?
+                    </div>
+                    <div class="chat_bubble_option" onclick="choose(1,'Bus')">
+                        Bus
+                    </div>
+                    <div class="chat_bubble_option" onclick="choose(1,'Car')">
+                        Car
+                    </div>
+                    <div class="chat_bubble_option" onclick="choose(1,'Metro')">
+                        Metro
+                    </div>
+                    <div class="chat_bubble_option" onclick="choose(1,'Bike')">
+                        Bike
+                    </div>
+                    <div class="chat_bubble_option" onclick="choose(1,'Walk')">
+                        Walk
+                    </div>
             </div>
-        
-       
-        
-        
-           <div class="share" width="200" height="50">
-             <p> Share my report</p>
-         </div>
-        
-         <div class="again" width="200" height="50">
-             <p> Play again</p>
-         </div>
-        
-          </ul>
+        </div>
+
+
+        <!-- page2 -->
+        <div class="chat_box">
+            <div class="chat_head">
+                <div class="chat_img">
+                    <svg t="1638268120987" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4077" width="64" height="64"><path d="M511.333 63.333c-247.424 0-448 200.576-448 448s200.576 448 448 448 448-200.576 448-448-200.576-448-448-448z m0 832c-51.868 0-102.15-10.144-149.451-30.15-36.011-15.231-69.123-35.67-98.812-60.897 12.177-31.985 42.226-63.875 84.223-88.903C396.189 686.243 456.222 669.53 512 669.53c55.631 0 115.416 16.658 164.026 45.703 41.762 24.953 71.689 56.812 83.863 88.804-29.764 25.342-62.976 45.865-99.106 61.146-47.299 20.006-97.582 30.15-149.45 30.15z m296.268-139.658c-20.493-35.937-54.353-68.855-98.747-95.381C649.75 624.979 579.839 605.53 512 605.53c-67.964 0-138.094 19.488-197.471 54.875-44.644 26.606-78.656 59.594-99.195 95.586-23.835-28.755-43.234-60.652-57.85-95.208-20.006-47.3-30.15-97.583-30.15-149.451s10.144-102.15 30.15-149.451c19.337-45.719 47.034-86.792 82.321-122.078 35.286-35.287 76.359-62.983 122.078-82.321 47.3-20.006 97.583-30.15 149.451-30.15 51.868 0 102.15 10.144 149.451 30.15 45.719 19.337 86.792 47.034 122.078 82.321 35.287 35.286 62.983 76.359 82.321 122.078 20.006 47.3 30.15 97.583 30.15 149.451s-10.144 102.15-30.15 149.451c-14.563 34.429-33.869 66.22-57.583 94.892z" fill="#B6B6B6" p-id="4078"></path><path d="M512 220.223c-88.224 0-160 71.776-160 160s71.776 160 160 160c88.225 0 160-71.775 160-160s-71.775-160-160-160z m0 256c-52.935 0-96-43.065-96-96s43.065-96 96-96 96 43.065 96 96-43.065 96-96 96z" fill="#B6B6B6" p-id="4079"></path></svg>
+                </div>
+                <div>
+                    <p>My trees</p>
+                    <div class="tree_box">
+                        <div class="choose_hide"></div>
+                        <img src="./images/tree.png" alt="" class="img_trees">
+                        <img src="./images/tree.png" alt="" class="img_trees">
+                    </div>
+                </div>
+            </div>
+            <div class="chat_content">
+                    <div class="chat_bubble_question">
+                        Do you buy mostly local products?
+                    </div>
+                    <div class="chat_bubble_option bubble_width" onclick="choose(2,'Always')">
+                        Always
+                    </div>
+                    <div class="chat_bubble_option bubble_width" onclick="choose(2,'Sometimes')">
+                        Sometimes
+                    </div>
+                    <div class="chat_bubble_option bubble_width" onclick="choose(2,'Not considering this option')">
+                        Not considering this option
+                    </div>
+            </div>
+        </div>
+
+        <!-- page3 -->
+        <div class="chat_box">
+            <div class="chat_head">
+                <div class="chat_img">
+                    <svg t="1638268120987" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4077" width="64" height="64"><path d="M511.333 63.333c-247.424 0-448 200.576-448 448s200.576 448 448 448 448-200.576 448-448-200.576-448-448-448z m0 832c-51.868 0-102.15-10.144-149.451-30.15-36.011-15.231-69.123-35.67-98.812-60.897 12.177-31.985 42.226-63.875 84.223-88.903C396.189 686.243 456.222 669.53 512 669.53c55.631 0 115.416 16.658 164.026 45.703 41.762 24.953 71.689 56.812 83.863 88.804-29.764 25.342-62.976 45.865-99.106 61.146-47.299 20.006-97.582 30.15-149.45 30.15z m296.268-139.658c-20.493-35.937-54.353-68.855-98.747-95.381C649.75 624.979 579.839 605.53 512 605.53c-67.964 0-138.094 19.488-197.471 54.875-44.644 26.606-78.656 59.594-99.195 95.586-23.835-28.755-43.234-60.652-57.85-95.208-20.006-47.3-30.15-97.583-30.15-149.451s10.144-102.15 30.15-149.451c19.337-45.719 47.034-86.792 82.321-122.078 35.286-35.287 76.359-62.983 122.078-82.321 47.3-20.006 97.583-30.15 149.451-30.15 51.868 0 102.15 10.144 149.451 30.15 45.719 19.337 86.792 47.034 122.078 82.321 35.287 35.286 62.983 76.359 82.321 122.078 20.006 47.3 30.15 97.583 30.15 149.451s-10.144 102.15-30.15 149.451c-14.563 34.429-33.869 66.22-57.583 94.892z" fill="#B6B6B6" p-id="4078"></path><path d="M512 220.223c-88.224 0-160 71.776-160 160s71.776 160 160 160c88.225 0 160-71.775 160-160s-71.775-160-160-160z m0 256c-52.935 0-96-43.065-96-96s43.065-96 96-96 96 43.065 96 96-43.065 96-96 96z" fill="#B6B6B6" p-id="4079"></path></svg>
+                </div>
+                <div>
+                    <p>My trees</p>
+                    <div class="tree_box">
+                        <div class="choose_hide"></div>
+                        <img src="./images/tree.png" alt="" class="img_trees">
+                        <img src="./images/tree.png" alt="" class="img_trees">
+                        <img src="./images/tree.png" alt="" class="img_trees">
+                    </div>
+                </div>
+            </div>
+            <div class="chat_content">
+                    <div class="chat_bubble_question">
+                        Do you usually use air conditioning or heating?
+                    </div>
+                    <div class="chat_bubble_option" onclick="choose(3,'Yes')">
+                        Yes
+                    </div>
+                    <div class="chat_bubble_option" onclick="choose(3,'No')">
+                        No
+                    </div>
+            </div>
+        </div>
+
+        <!-- page4 -->
+        <div class="chat_box">
+            <div class="chat_head">
+                <div class="chat_img">
+                    <svg t="1638268120987" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4077" width="64" height="64"><path d="M511.333 63.333c-247.424 0-448 200.576-448 448s200.576 448 448 448 448-200.576 448-448-200.576-448-448-448z m0 832c-51.868 0-102.15-10.144-149.451-30.15-36.011-15.231-69.123-35.67-98.812-60.897 12.177-31.985 42.226-63.875 84.223-88.903C396.189 686.243 456.222 669.53 512 669.53c55.631 0 115.416 16.658 164.026 45.703 41.762 24.953 71.689 56.812 83.863 88.804-29.764 25.342-62.976 45.865-99.106 61.146-47.299 20.006-97.582 30.15-149.45 30.15z m296.268-139.658c-20.493-35.937-54.353-68.855-98.747-95.381C649.75 624.979 579.839 605.53 512 605.53c-67.964 0-138.094 19.488-197.471 54.875-44.644 26.606-78.656 59.594-99.195 95.586-23.835-28.755-43.234-60.652-57.85-95.208-20.006-47.3-30.15-97.583-30.15-149.451s10.144-102.15 30.15-149.451c19.337-45.719 47.034-86.792 82.321-122.078 35.286-35.287 76.359-62.983 122.078-82.321 47.3-20.006 97.583-30.15 149.451-30.15 51.868 0 102.15 10.144 149.451 30.15 45.719 19.337 86.792 47.034 122.078 82.321 35.287 35.286 62.983 76.359 82.321 122.078 20.006 47.3 30.15 97.583 30.15 149.451s-10.144 102.15-30.15 149.451c-14.563 34.429-33.869 66.22-57.583 94.892z" fill="#B6B6B6" p-id="4078"></path><path d="M512 220.223c-88.224 0-160 71.776-160 160s71.776 160 160 160c88.225 0 160-71.775 160-160s-71.775-160-160-160z m0 256c-52.935 0-96-43.065-96-96s43.065-96 96-96 96 43.065 96 96-43.065 96-96 96z" fill="#B6B6B6" p-id="4079"></path></svg>
+                </div>
+                <div>
+                    <p>My trees</p>
+                    <div class="tree_box">
+                        <div class="choose_hide"></div>
+                        <img src="./images/tree.png" alt="" class="img_trees">
+                        <img src="./images/tree.png" alt="" class="img_trees">
+                        <img src="./images/tree.png" alt="" class="img_trees">
+                        <img src="./images/tree.png" alt="" class="img_trees">
+                    </div>
+                </div>
+            </div>
+            <div class="chat_content">
+                    <div class="chat_bubble_question">
+                        How many times do you eat out per day?
+                    </div>
+                    <div class="chat_bubble_option" onclick="choose(4,'One')">
+                        One
+                    </div>
+                    <div class="chat_bubble_option" onclick="choose(4,'Two')">
+                        Two
+                    </div>
+                    <div class="chat_bubble_option" onclick="choose(4,'Three or more')">
+                        Three or more
+                    </div>
+            </div>
+        </div>
+
+        <!-- page5 -->
+        <div class="chat_box">
+            <div class="chat_head">
+                <div class="chat_img">
+                    <svg t="1638268120987" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4077" width="64" height="64"><path d="M511.333 63.333c-247.424 0-448 200.576-448 448s200.576 448 448 448 448-200.576 448-448-200.576-448-448-448z m0 832c-51.868 0-102.15-10.144-149.451-30.15-36.011-15.231-69.123-35.67-98.812-60.897 12.177-31.985 42.226-63.875 84.223-88.903C396.189 686.243 456.222 669.53 512 669.53c55.631 0 115.416 16.658 164.026 45.703 41.762 24.953 71.689 56.812 83.863 88.804-29.764 25.342-62.976 45.865-99.106 61.146-47.299 20.006-97.582 30.15-149.45 30.15z m296.268-139.658c-20.493-35.937-54.353-68.855-98.747-95.381C649.75 624.979 579.839 605.53 512 605.53c-67.964 0-138.094 19.488-197.471 54.875-44.644 26.606-78.656 59.594-99.195 95.586-23.835-28.755-43.234-60.652-57.85-95.208-20.006-47.3-30.15-97.583-30.15-149.451s10.144-102.15 30.15-149.451c19.337-45.719 47.034-86.792 82.321-122.078 35.286-35.287 76.359-62.983 122.078-82.321 47.3-20.006 97.583-30.15 149.451-30.15 51.868 0 102.15 10.144 149.451 30.15 45.719 19.337 86.792 47.034 122.078 82.321 35.287 35.286 62.983 76.359 82.321 122.078 20.006 47.3 30.15 97.583 30.15 149.451s-10.144 102.15-30.15 149.451c-14.563 34.429-33.869 66.22-57.583 94.892z" fill="#B6B6B6" p-id="4078"></path><path d="M512 220.223c-88.224 0-160 71.776-160 160s71.776 160 160 160c88.225 0 160-71.775 160-160s-71.775-160-160-160z m0 256c-52.935 0-96-43.065-96-96s43.065-96 96-96 96 43.065 96 96-43.065 96-96 96z" fill="#B6B6B6" p-id="4079"></path></svg>
+                </div>
+                <div>
+                    <p>My trees</p>
+                    <div class="tree_box">
+                        <div class="choose_hide"></div>
+                        <img src="./images/tree.png" alt="" class="img_trees">
+                        <img src="./images/tree.png" alt="" class="img_trees">
+                        <img src="./images/tree.png" alt="" class="img_trees">
+                        <img src="./images/tree.png" alt="" class="img_trees">
+                        <img src="./images/tree.png" alt="" class="img_trees">
+                    </div>
+                </div>
+            </div>
+            <div class="chat_content">
+                    <div class="chat_bubble_question">
+                        What waste do you recycle or compost?
+                    </div>
+                    <div class="chat_bubble_option" onclick="choose(5,'Food')">
+                        Food
+                    </div>
+                    <div class="chat_bubble_option" onclick="choose(5,'Paper')">
+                        Paper
+                    </div>
+                    <div class="chat_bubble_option" onclick="choose(5,'Tin cans')">
+                        Tin cans
+                    </div>
+                    <div class="chat_bubble_option" onclick="choose(5,'Plastic')">
+                        Plastic
+                    </div>
+                    <div class="chat_bubble_option" onclick="choose(5,'Glass')">
+                        Glass
+                    </div>
+                    <div class="chat_bubble_option" onclick="choose(5,'None')">
+                        None
+                    </div>
+            </div>
+            <div>
+                <button class="index_button" onclick="submit()">Submit</button>
+            </div>
+        </div>
+
+    </div>
+      </main>
+    
+  
+<!-- page6 -->
+<div class="chat_box">
+<div id="quizzie">
+  <h3>How many trees can you save?</h3>
+  
+    <ul id="results">
+       <div class="saving">
+          <p>
+            <span id="desctree"></span>
+            <span id="numtree">
+            </span>
+          trees a year!
+          </p>
+          <div id="tree">
       </div>
-      </body>
-      
-      
-      </html>
+     </div>
+          
+          <div class="data">
+          <p>
+          You producted 
+            <span id="AllScore"></span>
+         kg CO2 every year, 
+            <span id="diffavg"></span>
+            <p class="desc"></p>
+          </p>
+      </div>
+
+       <div class="level">
+          <p>
+           Your Planting Level is
+           <div> <span class="plantlevel"></span> </div>
+            <h4></h4>
+          </p>
+      </div>
+    
+<head>
+    <script src="https://cdn.plot.ly/plotly-2.6.3.min.js"></script>
+</head>
+
+    <div id='radarchart'></div>
+
+    <div class="energy">
+          <p>Saving these energy, You can:</p> 
+
+    <div id="coffee">
+              <svg> </svg> 
+      <p>Cook <span id="numcoffee"></span> cups of coffee;</p>
+     </div>
+    
+    <div id="car">
+              <svg> </svg> 
+      <p>Drive an electric car <span id="numcar"></span> km;</p>
+     </div>
+     
+     <div id="phone">
+              <svg> </svg> 
+      <p>Charge your phone <span id="numphone"></span> times.</p>
+      </div>
+  </div>
 
 
+<div class="buttons">
+     <div class="share" width="200" height="50">
+       <p> Share my report</p>
+   </div>
+  
+     <div class="again" width="200" height="50">
+     <button id="playagain" onclick = "showTrees(0)"<p>Play again</p></button>       
+   </div>
+</div>
 
-
-
-
-
-
-
-    <!-- YOUR EXTERNAL PLUG-IN MAY ASK YOU TO PUT A SCRIPT TAG HERE. -->
-  </body>
+    </ul>
+</div> 
+</div>
+  
+ 
+  
+</body>
 </html>

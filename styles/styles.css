@@ -1,19 +1,31 @@
 /* ===== YOUR CSS GOES HERE ===== */
 /* ===== START WITH GLOBAL STYLES THEN USE MEDIA QUERIES FOR LAYOUT ADJUSTMENTS ===== */
-*{
-    margin: 0;padding: 0;
-    box-sizing: border-box;
+@import url(https://fonts.googleapis.com/css?family=Satisfy|Pathway+Gothic+One);
 
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
 html{
-    background-color: #EEEEEE;
-    /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
+    background: #00adad;
+    font-family:'Satisfy','cursive','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fff;
 }
+  
+/*main{
+  background-color: white;
+  width: 100%;
+}
+*/
+
 html,body{
-    height: 100vh;
+    margin: auto;
+    padding: 0;
 }
+
 .font_bold{
     font-weight: bold;
 }
@@ -25,13 +37,11 @@ html,body{
     box-sizing: border-box;
     padding:20px 20px;
 }
-.index_title{
-    font-size: 3rem;
+.index_title p{
+    font-size: 5rem;
     text-align: center;
 }
-.index_title .fontBold{
-    font-size: 3.2rem;
-}
+
 .index_content{
     width: 100%;
     font-size: 1.2rem;
@@ -46,13 +56,19 @@ html,body{
 
 }
 .index_picture{
-    border:1.5px solid #9FA09D;
+    background-image:url('https://cdn-icons-png.flaticon.com/512/877/877802.png'); 
+    background-size: 350px;
+    background-repeat: no-repeat;
+   background-position: center;
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 400px;
     margin: 0 auto;
     overflow: hidden;
     margin-top: 6px;
+}
+.index_picture img{
+    width: 100%;
 }
 .index_p_line_left,.index_p_line_right{
     position: absolute;
@@ -71,17 +87,24 @@ html,body{
     top: 50%;
 }
 .index_button{
-    margin-top: 10%;
-    width: 100%;
+    margin: 25px auto;
+    width: 250px;
     box-sizing: border-box;
-    padding:18px 0;
-    border-radius: 5px;
-    border: 2px solid #7FBA87;
-    background: white;
-    color:#3657C8;
-    font-size: 1.1rem;
-    font-weight: 500;
+    padding:15px 0;
+    border-radius: 8px;
+    border: 2px solid #F4B400;
+    background: #F4B400;
+    color: white;
+    font-size: 1.8em;
+    font-family: 'Pathway Gothic One', 'sans-serif';
+    align-self: center;
 }
+
+.index_button:hover {
+ background: #4ECB71;
+ border: 2px solid #4ECB71;
+}
+  
 .index_tips{
     display: flex;
     align-items: center;
@@ -97,6 +120,8 @@ html,body{
 .chat_box{
     padding: 30px 15px;
 }
+
+
 .chat_head{
     display: flex;
     align-items: center;
@@ -130,7 +155,7 @@ html,body{
 }
 .chat_bubble_question{
     color: #fff;
-    background: #4DA761;
+    background: #4ECB71;
     width: 60%;
     margin-left: 8px;
     margin-bottom: 50px;
@@ -138,7 +163,7 @@ html,body{
 .chat_bubble_option{
     color: #000;
     text-align: center;
-    background: #CFCFCF;
+    background: white;
     align-self:flex-end;
     padding: 12px 10px;
     margin-right: 8px;
@@ -152,7 +177,7 @@ html,body{
     width: 0px;
     border-width: 8px;
     border-style: solid;
-    border-color: transparent #4DA761 transparent transparent;
+    border-color: transparent #4ECB71 transparent transparent;
     left: -15px;
     top: 20%;
 }
@@ -165,7 +190,16 @@ html,body{
     width: 0px;
     border-width: 8px;
     border-style: solid;
-    border-color: transparent transparent transparent #CFCFCF;
+    border-color: transparent transparent transparent white;
+}
+
+.choose_bubble{
+    background: skyblue;
+    color:#fff;
+}
+.choose_bubble::after{
+    content: "";
+    border-color: transparent transparent transparent skyblue;
 }
 
 .bubble_width{
@@ -174,58 +208,29 @@ html,body{
 .tree_box{
     position: relative;
 }
-.hide_trees_bottom{
-    width: 100%;
-    background: #EEEEEE;
-    height: 69%;
-    position: absolute;
-    top: 0;
-    left: 0;
+
+
+/*Results*/
+.indexBox, .chat_box, #quizzie {
+    margin: auto;
+    padding: 0;
+    width: 800px;
+    align-self: center;
 }
 
-@import "compass/css3";
-
-@import url(https://fonts.googleapis.com/css?family=Satisfy|Pathway+Gothic+One);
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 h1,h2,.page1, body,.button {
   display: grid;
   place-content: center;
 }
 
-.page0,
-.page1,
-.page2,
-.page3,
-.page4,
-.page5,
-.page6, 
-body, 
-main,
-#quizzie {
-  margin: 0;
-    padding: 0;
-    width: 407px;
-    height: 855px;
-}
-
-body {
-  background: linear-gradient(15deg, #5cbddd, #00adad);
-  color: #fff;
-}
-
 h1,h2,h3,h4{
   font-family: 'Satisfy', 'cursive';
-  font-size: 2em;
+  font-size: 3em;
 }
 
 p {
   font-family: 'Pathway Gothic One', 'sans-serif';
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 h3,h4,p {
@@ -235,66 +240,100 @@ h3,h4,p {
     margin: 1%;
 }
 
-#tree0{
-   background-image: url("https://cdn-icons-png.flaticon.com/512/877/877802.png");
-   height: 250px;
-   background-size:250px;
-   background-repeat: no-repeat;
-  margin: 75px;
-  place-content: center;
-}
+h3{
+    margin: 1em 0;
+  }
 
-#tree {
-   background-image: url("https://cdn-icons-png.flaticon.com/512/877/877802.png");
-   height: 80px;
-   background-size:40px;
-   background-repeat: repeat;
-  margin: 25px;
-}
-
-.saving p,
-.co2,
-.avg{
+#AllScore,
+#numtree,
+#diffavg,
+#numcoffee,
+#numcar,
+#numphone{
   background: #4ECB71;
-   border-radius: 6px;
+  border-radius: 6px;
   padding:5px;
 }
 
+.saving p,
 .data p{
- text-align: left;
- display: inline-block;
+  margin: 1em 0 1em 0;
+  text-align: left;
+  display: inline-block;
+} 
+
+#radarchart{
+   align-self: center;
+   width: 100%;
+}
+
+.energy{
+  padding: 15px 0;
+  margin: 2em 0;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #367d7d;
 }
 
 .level{
-  background-color:#4ECB71;
-  padding:15px 0;
-  margin:5px 10px 0 10px;
+  background-color: #367d7d;
+  padding: 15px 0 15px 0;
+  margin: 1em auto;
+  border-radius: 8px;
 }
 
-.level svg{
-  background-image: url("https://l2p-league.com/wp-content/uploads/2019/05/ligi22-300x124.png");
-   background-size:300px;
-   height:118px;
-   background-repeat: no-repeat;
+.level p{
+   text-align: center;
 }
 
-.coffee svg{
+.plantlevel{
+align-self: center;
+}
+
+#coffee,
+#car,
+#phone{
+  padding: 20px;
+}
+
+#coffee svg {
   background-image: url("https://cdn0.iconfinder.com/data/icons/good-morning-1/128/morning_cute_tea_coffee_cup_hot-512.png");
-   background-size:100px;
+   background-size: 200px;
    background-repeat: no-repeat;
+   margin: 0 0 0 50px;
+   padding: 20px;
 }
 
-.car svg{
+#coffee p{
+  text-align:right;
+  margin: -125px 50px 0 0;
+}
+
+#car svg{
   background-image: url("https://cdn1.iconfinder.com/data/icons/family-life-filled-outline/340/travel_car_summer_vacation_trip_road_drive_vehicle_journey_adventure_holiday-512.png");
-   background-size:100px;
+   background-size: 150px;
    background-repeat: no-repeat;
    background-position: right;
+  margin: 20px 0 0 350px;
 }
 
-.bear svg{
-  background-image: url("https://cdn2.iconfinder.com/data/icons/scenarium-vol-4/128/043_polar_bear_arctic_north_pole_cold-512.png");
-   background-size:100px;
+#car p{
+  margin: -90px 0 0 50px;
+  text-align:left;
+}
+
+#phone svg{
+   background-image: url("https://cdn1.iconfinder.com/data/icons/mobile-colored/96/phone_charge_battery_96-1024.png");
+   background-size: 180px;
    background-repeat: no-repeat;
+   background-position: left;
+   margin: 20px 40px 80px 55px;
+}
+
+#phone p{
+  margin: -180px 50px 50px 0;
+  text-align: right;
 }
 
 .share{
@@ -306,7 +345,9 @@ h3,h4,p {
     text-decoration: none;
     font-size: 14px;
     border-radius: 8px;
-    margin:0 10px;
+    margin: 25px auto;
+    width: 250px;
+   align-self: center;
 }
 
 .again{
@@ -317,6 +358,184 @@ h3,h4,p {
     text-align: center;
     text-decoration: none;
     font-size: 14px;
-    margin:10px;
     border-radius: 8px;
+    margin: 10px auto;
+    width: 250px;
+   align-self: center;
+}
+
+.buttons{
+  margin: 2em 0 4em 0;
+  width: 700px;
+}
+
+@media screen and (min-width: 50px) and (max-width: 800px){
+  
+.indexBox,
+.chat_box,
+.page0,
+.page1,
+.page2,
+.page3,
+.page4,
+.page5,
+.page6, 
+body, 
+main,
+#quizzie {
+    margin: auto;
+    padding: 0;
+    width: 407px;
+    align-self: center;
+}
+
+  .index_title p{
+    font-size: 4rem;
+    text-align: center;
+    width: 407px;
+    align-self: center;
+    margin: 0.5em auto;
+}
+  
+
+h1,h2,h3,h4{
+  font-family: 'Satisfy', 'cursive';
+  font-size: 2em;
+}
+  
+p {
+  font-family: 'Pathway Gothic One', 'sans-serif';
+  font-size: 1.5em;
+}
+
+h3,h4,p {
+    text-align: center;
+    display: block;
+    width: auto;
+    margin: 1%;
+}
+  
+h3{
+    margin: 1em 0;
+  }
+
+.saving p,
+#diffavg,
+#numcoffee,
+#numcar,
+#numphone{
+  background: #4ECB71;
+  border-radius: 6px;
+  padding:5px;
+}
+
+.saving p{
+ display: block;
+ margin: 1em auto;
+ text-align: center;
+}
+  
+.data p{
+ display: block;
+ margin: 1em auto 0.25em auto;
+ text-align: center;
+  display: inline-block;}
+
+#radarchart{
+   align-self: center;
+    width: 407px;
+}
+  
+.energy{
+  padding: 15px 0;
+  margin: 1em 0;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #367d7d;
+  }
+
+#coffee svg {
+  background-image: url("https://cdn0.iconfinder.com/data/icons/good-morning-1/128/morning_cute_tea_coffee_cup_hot-512.png");
+   background-size: 100px;
+   background-repeat: no-repeat;
+   margin: 0 0 0 15px;
+}
+
+#coffee p{
+  margin: -155px 0 0 55px;
+}
+
+#car svg{
+  background-image: url("https://cdn1.iconfinder.com/data/icons/family-life-filled-outline/340/travel_car_summer_vacation_trip_road_drive_vehicle_journey_adventure_holiday-512.png");
+   background-size:80px;
+   background-repeat: no-repeat;
+   margin: 0 15px 0 30px;
+}
+
+#car p{
+  margin: -90px 55px 0 15px;
+
+}
+
+#phone svg{
+   background-image: url("https://cdn1.iconfinder.com/data/icons/mobile-colored/96/phone_charge_battery_96-1024.png");
+   background-size:110px;
+   background-repeat: no-repeat;
+   background-position: left;
+   margin: 0 0 0 10px;
+}
+
+#phone p{
+  margin: -90px -50px 0 120px;
+  padding: 0 0 25px 0;
+  width: 200px;
+}
+
+
+.share{
+   background-color: #F4B400;
+    border: none;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 8px;
+    margin: 1em auto;
+}
+
+.again{
+   background-color: #F4B400;
+    border: none;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 8px;
+    margin: 1em auto;
+}
+
+.buttons{
+  margin: 2em 0 3em 0;
+  width: 350px;
+}
+}
+
+.chat_bubble_option:hover {
+  border-bottom: 4px solid #F4B400;
+} {
+  
+}
+
+#playagain{
+   background-color: #F4B400;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2em;
+    margin: 0 auto;
+    font-family: 'Pathway Gothic One', 'sans-serif';
 }
