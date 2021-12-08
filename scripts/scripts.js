@@ -1,5 +1,3 @@
-/* WRITE YOUR JS HERE... YOU MAY REQUIRE MORE THAN ONE JS FILE. IF SO SAVE IT SEPARATELY IN THE SCRIPTS DIRECTORY */
-
 //Quiz
 const options = {
     1:[
@@ -25,11 +23,11 @@ const options = {
     ],
     5:[
         {label:"Food",score:-5*365/10},
-        {label:"Paper",score:-5*365/10},
+        {label:"Paper",score:-1520/10},
         {label:"Tin cans",score:-5*365/10},
-        {label:"Plastic",score:-5*365/10},
+        {label:"Plastic",score:-2800/10},
         {label:"Glass",score:-5*365/10},
-        {label:"None",score:0},
+        {label:"None",score:0}
     ]
 }
 
@@ -47,7 +45,7 @@ function showTrees(key){
         doms[key-1].style.display = "block";
         document.querySelector(".indexBox").style.display = "none";
     }else{
-        let lastScore = JSON.parse(localStorage.getItem("lastAnswer")||'{}');//获取上次作答及成绩
+        let lastScore = JSON.parse(localStorage.getItem("lastAnswer")||'{}');
         if(lastScore.allScore){
         }
         document.querySelector(".indexBox").style.display = "block";
@@ -57,8 +55,8 @@ function showTrees(key){
 function choose(key,value){
     let answer = JSON.parse(localStorage.getItem("answer")||'{}');
     if(key==5){
-        // 多选
-        let fDom = document.getElementsByClassName("chat_content")[key-1];//父元素
+        
+        let fDom = document.getElementsByClassName("chat_content")[key-1];
         let cDom = fDom.getElementsByClassName("chat_bubble_option");
         answer[key] = answer[key]||[];
         let opIndex = answer[key].indexOf(value);
@@ -93,7 +91,8 @@ function submit(){
         }
     }
     answer.allScore = allScore;
-    
+  console.log(answer);
+  console.log(data);
     localStorage.setItem("lastAnswer",JSON.stringify(answer));
     this.showTrees(6);
 }
@@ -150,7 +149,7 @@ calculateTrees();
 function addTrees(){
 for (var i = 0; i < numtree.textContent; i++) {
     DisplayTrees.innerHTML += "<img src='https://cdn-icons-png.flaticon.com/512/877/877802.png' width='20%'/>";
-};
+}
 }
 
 addTrees();
@@ -160,8 +159,7 @@ let bad = 'Oh! You killed';
 let good = 'Congrats! You saved';
 
 function treeDisc() {
-    if (
-  userSaveCo2 > 0){
+    if (userSaveCo2 > 0){
         desctree.textContent = good;
     } else {
       desctree.textContent = bad;
@@ -200,21 +198,21 @@ calculateResults();
 // display levels
 let finalscore = allScore/100;
 function calculateLevels() {
-       if ( 0 < finalscore < 68){
-        plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://static.wikia.nocookie.net/leagueoflegends/images/5/5f/Season_2019_-_Challenger_1.png'/><h4>Challenger</h4></div>";
-    }  else if ( 68 < finalscore < 116 ){
-        plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://static.wikia.nocookie.net/leagueoflegends/images/7/76/Season_2019_-_Grandmaster_1.png'/><h4>Grandmaster</h4>";
-    }  else if ( 116 < finalscore < 164 ){
-        plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://static.wikia.nocookie.net/leagueoflegends/images/1/11/Season_2019_-_Master_1.png'/><h4>Master</h4>";
-    } else if ( 212 < finalscore < 260 ){
+       if ( 0 < finalscore && finalscore < 68){
+       plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://static.wikia.nocookie.net/leagueoflegends/images/5/5f/Season_2019_-_Challenger_1.png'/><h4>Challenger</h4></div>";
+    }  else if ( 68 < finalscore && finalscore  < 116 ){
+plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://static.wikia.nocookie.net/leagueoflegends/images/7/76/Season_2019_-_Grandmaster_1.png'/><h4>Grandmaster</h4>";
+    }  else if ( 116 < finalscore && finalscore  < 164 ){
+plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://static.wikia.nocookie.net/leagueoflegends/images/1/11/Season_2019_-_Master_1.png'/><h4>Master</h4>";
+    } else if ( 212 < finalscore && finalscore < 260 ){
        plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://static.wikia.nocookie.net/leagueoflegends/images/9/91/Season_2019_-_Diamond_1.png'/><h4>Bright diamond</h4>";
-    } else if ( 260 < finalscore < 308 ){
+    } else if ( 260 < finalscore && finalscore < 308 ){
        plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://static.wikia.nocookie.net/leagueoflegends/images/7/74/Season_2019_-_Platinum_1.png'/><h4>Luxurious platinum</h4>";
-    } else if ( 164 < finalscore < 212 ){
+    } else if ( 164 < finalscore && finalscore < 212 ){
        plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://static.wikia.nocookie.net/leagueoflegends/images/9/96/Season_2019_-_Gold_1.png'/><h4>The glory of the gold</h4>";
-    } else if ( 308 < finalscore < 356 ){
+    } else if ( 308 < finalscore && finalscore < 356 ){
        plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://static.wikia.nocookie.net/leagueoflegends/images/7/70/Season_2019_-_Silver_1.png'/><h4>Unyielding Silver</h4>";
-    } else if ( 356 < finalscore < 404 ){
+    } else if ( 356 < finalscore && finalscore < 404 ){
        plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://static.wikia.nocookie.net/leagueoflegends/images/f/f4/Season_2019_-_Bronze_1.png'/><h4>The heroic bronze</h4>";
     } else{
        plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://static.wikia.nocookie.net/leagueoflegends/images/0/03/Season_2019_-_Iron_1.png'/><h4>Iron</h4>";
@@ -223,50 +221,69 @@ function calculateLevels() {
 
 calculateLevels();
 
-//display radar chart
-data = [{
-type: 'scatterpolar',
-r: [options[1].find(item=>item.label==answer[1][0]).score/100, options[2].find(item=>item.label==answer[2][0]).score/100, options[3].find(item=>item.label==answer[3][0]).score/100, options[4].find(item=>item.label==answer[4][0]).score/100, options[5].find(item=>item.label==answer[5][0]).score/100],
-theta: ['Transport','Shopping habit','Energy consumption','Diet preference',  'Recycle'],
-fill: 'toself'
-}]
-
-layout = {
-polar: {
-radialaxis: {
-  visible: true,
-  range: [0, 100]
+//display bar chart
+var data = [
+{
+x: ['Transport','Shopping habit','Energy consumption','Diet preference',  'Recycle'],
+y: [options[1].find(item=>item.label==answer[1][0]).score*10, options[2].find(item=>item.label==answer[2][0]).score*10, options[3].find(item=>item.label==answer[3][0]).score*10, options[4].find(item=>item.label==answer[4][0]).score*10, options[5].find(item=>item.label==answer[5][0]).score*10],
+type: 'bar',
+ marker: {
+color: '#367d7d'
 }
-},
-showlegend: false
 }
+];
 
-Plotly.newPlot("radarchart", data, layout)
+var layout = {
+title: 'Details of Your Carbon Footprint_CO2/g'
+};
 
+
+Plotly.newPlot("barchart", data, layout);
 
 //cal the coffee number
 const CO2toCoffee = 0.00738;
+let fix = 1;
 
-function calculateCoffee(){
-numcoffee.textContent = Math.abs(Math.round(userSaveCo2 / CO2toCoffee));
+function calculateCoffee() {
+    if ( userSaveCo2 > 0 ){
+        numcoffee.textContent = Math.abs(Math.round(userSaveCo2 / CO2toCoffee));
+}else if( userSaveCo2 < 0) {
+      numcoffee.textContent = Math.abs(Math.round(userSaveCo2 / CO2toCoffee));
+    }else {
+      numcoffee.textContent = Math.abs(Math.round((userSaveCo2 + fix) / CO2toCoffee));
     }
+}
+
 calculateCoffee();
 
 //cal the cars number
 const CO2toCar = 6.4;
 const CO2toKwh = 0.43;
 
-function calculateCars(){
-numcar.textContent = Math.abs(Math.round((userSaveCo2 / CO2toKwh) * CO2toCar));
+function calculateCars() {
+    if ( userSaveCo2 > 0 ){
+    numcar.textContent = Math.abs(Math.round((userSaveCo2 / CO2toKwh) * CO2toCar));
+}else if( userSaveCo2 < 0) {
+      numcar.textContent = Math.abs(Math.round((userSaveCo2 / CO2toKwh) * CO2toCar));
+    }else {
+    numcar.textContent = Math.abs(Math.round(((userSaveCo2+fix) / CO2toKwh) * CO2toCar));
     }
+}
+
 calculateCars();
 
 //cal the phone charging times
 const KwhtoPhone = 0.015;
 
-function calculateChargePhone(){
-numphone.textContent = Math.abs((Math.round((userSaveCo2 / CO2toKwh) / KwhtoPhone)));
-    }
+function calculateChargePhone() {
+    if ( userSaveCo2 > 0 ){
+    numphone.textContent = Math.abs((Math.round((userSaveCo2 / CO2toKwh) / KwhtoPhone)));
+} else if ( userSaveCo2 < 0 ){
+    numphone.textContent = Math.abs((Math.round((userSaveCo2 / CO2toKwh) / KwhtoPhone))); 
+    } else {
+ numphone.textContent = Math.abs((Math.round(((userSaveCo2+fix) / CO2toKwh) / KwhtoPhone)));
+    } 
+}
 calculateChargePhone();
 
 
