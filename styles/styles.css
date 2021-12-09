@@ -31,9 +31,9 @@ html,body{
     padding:20px 20px;
 }
 .index_title p{
-    font-size: 8vw;
+    font-size: 6vw;
     text-align: center;
-    margin: 0.5em 0 0.3em 0;
+    margin: 0.3em 0;
 }
 
 .index_content{
@@ -50,12 +50,12 @@ html,body{
 }
 .index_picture{
     background-image:url('https://cdn-icons-png.flaticon.com/512/877/877802.png'); 
-    background-size: 350px;
+    background-size: 300px;
     background-repeat: no-repeat;
    background-position: center;
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 320px;
     margin: 0 auto;
     overflow: hidden;
     margin-top: 6px;
@@ -94,7 +94,7 @@ html,body{
     border: 2px solid #F4B400;
     background: #F4B400;
     color: white;
-    font-size: 1.8em;
+    font-size: 1.5em;
     font-family: 'Pathway Gothic One', 'sans-serif';
     align-self: center;
 }
@@ -255,7 +255,7 @@ html,body{
     margin: 0 auto;
     overflow: hidden;
     margin-top: 6px;
-    border-radius:50px；
+    border-radius: 50px;
 }
 .shovel5{
   background-image:url('https://cdn3.iconfinder.com/data/icons/gardening-132/64/33-Digging-1024.png'); 
@@ -266,7 +266,7 @@ html,body{
     margin: 0 auto;
     overflow: hidden;
     margin-top: 6px;
-    border-radius:50px；
+    border-radius: 50px;
 }
 
 #page5que {
@@ -358,12 +358,72 @@ h3{
 align-self: center;
 }
 
+.vertical_dotted_line{
+   border-left: 4px dotted white;
+    height: 800px;
+  margin: 0 50%;
+  } 
+
+.circle{
+width: 10px;
+height: 10px;
+background-color: white;
+border-radius: 50%;
+display: inline-block;
+margin: 25px 0 -12px 396px;
+}
+
+.circle1{
+width: 10px;
+height: 10px;
+background-color: white;
+border-radius: 50%;
+display: inline-block;
+margin: 0px 0px 0 -24px;
+  }
+  
+.circle2{
+width: 10px;
+height: 10px;
+background-color: white;
+border-radius: 50%;
+display: inline-block;
+margin: 0 0 0 776px;
+  }
+  
+.circle3{
+width: 10px;
+height: 10px;
+background-color: white;
+border-radius: 50%;
+display: inline-block;
+margin: 0 0px 55px -24px;
+  }
+
+.circle4{
+width: 10px;
+height: 10px;
+background-color: white;
+border-radius: 50%;
+display: inline-block;
+margin: 65px 0 50px 396px;
+  }
+
 #coffee,
 #car,
 #phone{
   padding: 20px;
 }
 
+.horizontal_dotted_line1{
+  border-bottom: 4px dotted white;
+  width: 50px;
+  margin: -150px 0 -12px -21px;
+} 
+
+#coffee{
+  margin: -800px 0 0 400px;
+}
 #coffee svg {
   background-image: url("https://cdn0.iconfinder.com/data/icons/good-morning-1/128/morning_cute_tea_coffee_cup_hot-512.png");
    background-size: 200px;
@@ -374,7 +434,17 @@ align-self: center;
 
 #coffee p{
   text-align:right;
-  margin: -100px 50px 0 240px;
+  margin: 0 70px 0 0;
+}
+
+.horizontal_dotted_line2{
+  border-bottom: 4px dotted white;
+  width: 50px;
+  margin: -115px 0 -12px 731px;
+} 
+
+#car{
+  margin: 100px 0 0 -400px;
 }
 
 #car svg{
@@ -386,21 +456,29 @@ align-self: center;
 }
 
 #car p{
-  margin: -90px 0 0 50px;
-  text-align:left;
+  margin: 10px 0 0 0;
+}
+
+.horizontal_dotted_line3{
+  border-bottom: 4px dotted white;
+  width: 50px;
+ margin: -90px 0 -7px -21px;
+}  
+
+#phone{
+  margin: 40px 0 0 400px;
 }
 
 #phone svg{
    background-image: url("https://cdn1.iconfinder.com/data/icons/mobile-colored/96/phone_charge_battery_96-1024.png");
-   background-size: 180px;
+   background-size: 200px;
    background-repeat: no-repeat;
    background-position: left;
-   margin: 40px 40px 80px 55px;
+   margin: 60px 40px 80px 55px;
 }
 
 #phone p{
-  margin: -130px 50px 50px 60px;
-  text-align: right;
+  margin: -70px 0 0 0;
 }
 
 .again{
@@ -562,6 +640,51 @@ h3{
    align-self: center;
     width: 407px;
 }
+
+.circle{
+width: 10px;
+height: 10px;
+background-color: white;
+border-radius: 50%;
+display: inline-block;
+margin: 25px 0 0 199px;
+}
+
+.circle1{
+width: 10px;
+height: 10px;
+background-color: white;
+border-radius: 50%;
+display: inline-block;
+margin: 0px 0 5px 29px;
+  }
+  
+.circle2{
+width: 10px;
+height: 10px;
+background-color: white;
+border-radius: 50%;
+display: inline-block;
+margin: 0px 0 5px 179px;
+  }
+  
+.circle3{
+width: 10px;
+height: 10px;
+background-color: white;
+border-radius: 50%;
+display: inline-block;
+margin: -115px 0 0px 29px;
+  }
+
+.circle4{
+width: 10px;
+height: 10px;
+background-color: white;
+border-radius: 50%;
+display: inline-block;
+margin: 0 0 -95px 199px;
+  }
   
 .energy{
   padding: 15px 0;
@@ -577,41 +700,37 @@ h3{
   padding: 15px 0;
   margin: 1em 0;
   }
-
-  
   
 #coffee {
-  margin:  -580px 0 0 150px;
+  margin: -570px 0 0 150px;
 }
   
 .horizontal_dotted_line1{
   border-bottom: 4px dotted white;
   width: 30px;
-  margin: -115px 0 0 35px;
+  margin: -115px 0 -7px 35px;
 } 
 
 #coffee svg {
   background-image: url("https://cdn0.iconfinder.com/data/icons/good-morning-1/128/morning_cute_tea_coffee_cup_hot-512.png");
    background-size: 100px;
    background-repeat: no-repeat;
-   margin: 0 0 0 50px;
-  
+   margin: 50px 0 0 65px;
 }
 
 #coffee p{
   margin: -90px 0 0 65px;
   text-align:left;
 }
-
   
 #car {
-  margin:  50px 110px 0 0;
+  margin: 20px 110px 0 0;
 }
   
 .horizontal_dotted_line2{
   border-bottom: 4px dotted white;
   width: 30px;
- margin: -115px 0 0 150px;
+ margin:-115px 0 -7px 150px;
 } 
 
 #car svg{
@@ -624,24 +743,23 @@ h3{
 
 #car p{
   margin: -20px 58px 0 15px;
-
 }
 
 #phone {
-   margin:  35px 0 0 150px;
+   margin: 20px 0 0 150px;
 }
   
 .horizontal_dotted_line3{
   border-bottom: 4px dotted white;
   width: 30px;
- margin: -115px 0 0 35px;
+ margin: -115px 0px -12px 35px;
 }  
   
 #phone svg{
    background-image: url("https://cdn1.iconfinder.com/data/icons/mobile-colored/96/phone_charge_battery_96-1024.png");
-   background-size:110px;
+   background-size:115px;
    background-repeat: no-repeat;
-   margin: 0 0 0 45px;
+   margin: 0 0 0 58px;
 }
 
 #phone p{
@@ -653,8 +771,8 @@ h3{
 .vertical_dotted_line{
    border-left: 4px dotted white;
     height: 500px;
-  margin: 10% 50%;
-  }   }
+  margin: 0 50%;
+  }
 
 .again{
    background-color: #F4B400;
@@ -690,4 +808,5 @@ h3{
     margin: 0 auto;
     font-family: 'Pathway Gothic One', 'sans-serif';
 }
+
 }
