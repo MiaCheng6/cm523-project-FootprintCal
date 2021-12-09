@@ -567,7 +567,7 @@ main,
 }
 
   .index_title p{
-    font-size: 10vw;
+    font-size: 9vw;
     text-align: center;
     width: 407px;
     align-self: center;
@@ -601,7 +601,7 @@ h3{
   
 .index_picture{
    background-size: 100%;
-   margin: -2em auto;}
+   margin: 0 auto;}
   
 
 .saving p{
