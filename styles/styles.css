@@ -1,5 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Satisfy|Pathway+Gothic+One);
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Satisfy&display=swap');
+
 *,
 *::before,
 *::after {
@@ -147,7 +149,7 @@ html,body{
     display: inline-block;
     word-break: break-all;
     font-size: 1.1rem;
-    font-family: "Microsoft YaHei";
+    font-family: 'Roboto', sans-serif;
     word-wrap: break-word;
     word-break: break-word;
     position: relative;
@@ -160,7 +162,7 @@ html,body{
     margin-bottom: 50px;
 }
 .chat_bubble_option{
-    color: #000;
+    color: #675750;
     text-align: center;
     background: white;
     align-self:flex-end;
