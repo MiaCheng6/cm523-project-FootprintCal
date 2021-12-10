@@ -28,19 +28,37 @@
             </div>
             <div class="index_content">
                     <p>Carbon Footprint Calculator</p>
-                    <div class="index_content_main">
-                        <div class="font_bold font_violet index_tips">
-                         
-                            
+                    <div class="index_content_main">                            
                         </div>
+              
                         <div class="index_picture">
-                                     
                         </div>
+              
                         <div>
-                            <button class="index_button" onclick="showTrees(1)">PLAY</button>                          
+                            <button type="button" class="index_button" id="btn-play">PLAY</button>                         
                         </div>
+              
                     </div>
+         
+          
+    <footer class="page-footer">
+      <div class="container">
+        <p>
+          Created and maintained by Mia & YiTing
+        </p>
+        <ul>
+          <li>
+            <a href="https://docs.google.com/document/d/1WS0aH48-gNmvGJR-0OeEKZ9yelWp2XQydxU8vhCpv8M/edit?usp=sharing" class="link-Proposal">Project Proposal</a>
+          </li>
+          <li>
+            <a href="https://www.figma.com/file/XLaQAaGttWR8jPuhRezLCQ/523-Project-Wireframe?node-id=0%3A1" class="link-wireframe">WireFrame</a>
+          </li>
+          <li><a href="https://docs.google.com/document/d/19zjBgMVP_VXjBLGH7QJSmggUV_6ITuoxN_BrsiVHUew/edit?usp=sharing" class="link-uxreport">UX Report</a></li>
+        </ul>
+  
             </div>
+      
+      
         </div>
 
 
@@ -51,7 +69,6 @@
                     
                <ul>
                   <li><div>Keep Planting</div></li>
-              
                   <li><div class="shovel1"></div></li>
             </ul>
               
@@ -60,21 +77,20 @@
                     <div class="chat_bubble_question">
                         What transportation do you usually take?
                     </div>
-                    <div class="chat_bubble_option" onclick="choose(1,'Bus')">
+                     <button type="button" class="chat_bubble_option" id="optionbus">
                         Bus
-                    </div>
-                    <div class="chat_bubble_option" onclick="choose(1,'Car')">
-                        Car
-                    </div>
-                    <div class="chat_bubble_option" onclick="choose(1,'Metro')">
+                 </button>  
+                    <button type="button" class="chat_bubble_option" id="optioncar">
+                        Car</button>  
+                    <button type="button" class="chat_bubble_option" id="optionmetro">
                         Metro
-                    </div>
-                    <div class="chat_bubble_option" onclick="choose(1,'Bike')">
+                  </button>  
+                   <button type="button" class="chat_bubble_option" id="optionbike">
                         Bike
-                    </div>
-                    <div class="chat_bubble_option" onclick="choose(1,'Walk')">
+                    </button>  
+                     <button type="button" class="chat_bubble_option" id="optionwalk">
                         Walk
-                    </div>
+                      </button>  
             </div>
         </div>
 
@@ -84,7 +100,6 @@
             <div class="chat_head">
                 <ul>
                   <li><div>Keep Planting</div></li>
-              
                   <li><div class="shovel2"></div></li>
             </ul>
                 </div>
@@ -94,15 +109,15 @@
                     <div class="chat_bubble_question">
                         Do you buy mostly local products?
                     </div>
-                    <div class="chat_bubble_option bubble_width" onclick="choose(2,'Always')">
+              <button type="button" class="chat_bubble_option" id="optAlways">
                         Always
-                    </div>
-                    <div class="chat_bubble_option bubble_width" onclick="choose(2,'Sometimes')">
+                    </button>  
+               <button type="button" class="chat_bubble_option" id="optSometimes">                  
                         Sometimes
-                    </div>
-                    <div class="chat_bubble_option bubble_width" onclick="choose(2,'Not considering this option')">
+                      </button>  
+                  <button type="button" class="chat_bubble_option" id="optNotconsider">      
                         Not considering this option
-                    </div>
+                   </button>  
             </div>
         </div>
 
@@ -111,7 +126,6 @@
             <div class="chat_head">
                 <ul>
                   <li><div>Keep Planting</div></li>
-              
                   <li><div class="shovel3"></div></li>
             </ul>           
                 </div>
@@ -121,12 +135,13 @@
                     <div class="chat_bubble_question">
                         Do you usually use air conditioning or heating?
                     </div>
-                    <div class="chat_bubble_option" onclick="choose(3,'Yes')">
+              
+               <button type="button" class="chat_bubble_option" id="optYes">
                         Yes
-                    </div>
-                    <div class="chat_bubble_option" onclick="choose(3,'No')">
+                    </button>
+                    <button type="button" class="chat_bubble_option" id="optNo">
                         No
-                    </div>
+                    </button>
             </div>
         </div>
 
@@ -144,15 +159,14 @@
                     <div class="chat_bubble_question">
                         How many times do you eat out per day?
                     </div>
-                    <div class="chat_bubble_option" onclick="choose(4,'One')">
-                        One
-                    </div>
-                    <div class="chat_bubble_option" onclick="choose(4,'Two')">
+              <button type="button" class="chat_bubble_option" id="optOne">                         One
+                    </button>
+              <button type="button" class="chat_bubble_option" id="optTwo"> 
                         Two
-                    </div>
-                    <div class="chat_bubble_option" onclick="choose(4,'Three or more')">
+                    </button>
+              <button type="button" class="chat_bubble_option" id="optThree"> 
                         Three or more
-                    </div>
+                    </button>
             </div>
         </div>
 
@@ -161,37 +175,37 @@
             <div class="chat_head">
                 <ul>
                   <li><div>Keep Planting, you're almost there</div></li>
-              
                   <li><div class="shovel5"></div></li>
             </ul>
- 
-                </div>
+                 </div>
            
             <div class="chat_content">
                     <div class="chat_bubble_question" id="page5que">
                         What waste do you recycle or compost?
                     </div>
-                    <div class="chat_bubble_option" id="page5ans" onclick="choose(5,'Food')">
+              
+                    <button type="button" class="chat_bubble_option" id="optFood">                     
                         Food
-                    </div>
-                    <div class="chat_bubble_option" onclick="choose(5,'Paper')">
+                    </button>
+                     <button type="button" class="chat_bubble_option" id="optPaper">     
                         Paper
-                    </div>
-                    <div class="chat_bubble_option" onclick="choose(5,'Tin cans')">
+                    </button>
+                     <button type="button" class="chat_bubble_option" id="optTincans">     
                         Tin cans
-                    </div>
-                    <div class="chat_bubble_option" onclick="choose(5,'Plastic')">
+                    </button>
+                   <button type="button" class="chat_bubble_option" id="optPlastic">     
                         Plastic
-                    </div>
-                    <div class="chat_bubble_option" onclick="choose(5,'Glass')">
+                    </button>
+                    <button type="button" class="chat_bubble_option" id="optGlass">     
                         Glass
-                    </div>
-                    <div class="chat_bubble_option" onclick="choose(5,'None')">
+                    </button>
+                 <button type="button" class="chat_bubble_option" id="optNone">     
                         None
-                    </div>
+                    </button>
             </div>
+          
             <div class = "submitbutton">
-                <button class="index_button" onclick="submit()">Submit</button>
+               <button type="button" class="index_button" id="submitbtn">Submit</button>
             </div>
         </div>
 
@@ -276,7 +290,9 @@
 <div class="buttons">
   
      <div class="again" width="200" height="50">
-     <button id="playagain" onclick = "showTrees(0)"<p>Play again</p></button>       
+       
+     <button type="button" class="index_button" id="replay">Play again
+       </button>       
    </div>
 </div>
 
@@ -285,21 +301,6 @@
 </div>
   
  
-    <footer class="page-footer">
-      <div class="container">
-        <p>
-          Created and maintained by Mia & YiTing
-        </p>
-        <ul>
-          <li>
-            <a href="https://docs.google.com/document/d/1WS0aH48-gNmvGJR-0OeEKZ9yelWp2XQydxU8vhCpv8M/edit?usp=sharing" class="link-Proposal">Project Proposal</a>
-          </li>
-          <li>
-            <a href="https://www.figma.com/file/XLaQAaGttWR8jPuhRezLCQ/523-Project-Wireframe?node-id=0%3A1" class="link-wireframe">WireFrame</a>
-          </li>
-          <li><a href="https://docs.google.com/document/d/19zjBgMVP_VXjBLGH7QJSmggUV_6ITuoxN_BrsiVHUew/edit?usp=sharing" class="link-uxreport">UX Report</a></li>
-        </ul>
-  
   
 </body>
 </html>

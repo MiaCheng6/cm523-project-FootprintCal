@@ -38,7 +38,7 @@ html,body{
 
 .index_content{
     width: 100%;
-    font-size: 2.5vw;
+    font-size: 2vw;
     text-align: center;
 }
 .index_content_main{
@@ -86,7 +86,7 @@ html,body{
 }
 
 .index_button{
-    margin: 0.5em 0 2em 0;
+    margin: 1em 0;
     width: 250px;
     box-sizing: border-box;
     padding: 15px 0;
@@ -127,6 +127,7 @@ html,body{
     display: flex;
     align-items: center;
     font-size: 1.2rem;
+    margin: -2em 0;
 }
 .chat_img{
     margin-right: 15px;
@@ -157,7 +158,7 @@ html,body{
 .chat_bubble_question{
     color: #fff;
     background: #4ECB71;
-    width: 60%;
+    width: 50%;
     margin-left: 8px;
     margin-bottom: 50px;
 }
@@ -207,7 +208,7 @@ html,body{
 }
 
 .bubble_width{
-    width: 60%;
+    width: 40%;
 }
 .tree_box{
     position: relative;
@@ -218,7 +219,7 @@ html,body{
     background-repeat: no-repeat;
     width: 100%;
     height: 50px;
-    margin: 0 auto;
+    margin: 0;
     overflow: hidden;
     margin-top: 6px;
     border-radius:50px；
@@ -229,7 +230,7 @@ html,body{
     background-repeat: repeat-x;
     width: 100px;
     height: 50px;
-    margin: 0 auto;
+    margin: 0;
     overflow: hidden;
     margin-top: 6px;
     border-radius:50px；
@@ -241,7 +242,7 @@ html,body{
     background-repeat: repeat-x;
     width: 150px;
     height: 50px;
-    margin: 0 auto;
+    margin: 0;
     overflow: hidden;
     margin-top: 6px;
     border-radius:50px；
@@ -252,7 +253,7 @@ html,body{
     background-repeat: repeat-x;
     width: 200px;
     height: 50px;
-    margin: 0 auto;
+    margin: 0;
     overflow: hidden;
     margin-top: 6px;
     border-radius: 50px;
@@ -263,14 +264,10 @@ html,body{
     background-repeat: repeat-x;
     width: 250px;
     height: 50px;
-    margin: 0 auto;
+    margin: 0;
     overflow: hidden;
     margin-top: 6px;
     border-radius: 50px;
-}
-
-#page5que {
-  margin-top:-2em;
 }
 
 #page5ans {
@@ -332,6 +329,7 @@ h3{
 #barchart{
    align-self: center;
    width: 100%;
+   padding: 1em 3em;
 }
 
 .energy{
@@ -352,10 +350,13 @@ h3{
 
 .level p{
    text-align: center;
+   margin: 0.25em 0 0.7em 0;
 }
 
 .plantlevel{
 align-self: center;
+width: 800px;
+margin: 1em 0 0.5em 0;
 }
 
 .vertical_dotted_line{
@@ -481,31 +482,6 @@ margin: 65px 0 50px 396px;
   margin: -70px 0 0 0;
 }
 
-.again{
-   background-color: #F4B400;
-    border: none;
-    color: white;
-    padding: 12px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 14px;
-    border-radius: 8px;
-    margin: 10px auto;
-    width: 250px;
-   align-self: center;
-}
-
-#playagain{
-   background-color: #F4B400;
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-size: 2em;
-    margin: 0 auto;
-    font-family: 'Pathway Gothic One', 'sans-serif';
-}
-
 .buttons{
   display: flex;
   flex-flow: row wrap;
@@ -560,14 +536,14 @@ main,
 .indexBox,
 .chat_box,
 #quizzie {
-    margin: auto;
+    margin: 1.5em auto;
     padding: 0;
     width: 407px;
     align-self: center;
 }
 
   .index_title p{
-    font-size: 9vw;
+    font-size: 6vw;
     text-align: center;
     width: 407px;
     align-self: center;
@@ -600,8 +576,8 @@ h3{
 
   
 .index_picture{
-   background-size: 100%;
-   margin: 0 auto;}
+   background-size: 80%;
+   margin: 1em 0 0.5em 0;}
   
 
 .saving p{
@@ -638,7 +614,8 @@ h3{
 
 #barchart{
    align-self: center;
-    width: 407px;
+   width: 407px;
+   padding: 1em 3em;
 }
 
 .circle{
@@ -767,24 +744,11 @@ margin: 0 0 -95px 199px;
  text-align:left;
 }
 
-  
 .vertical_dotted_line{
    border-left: 4px dotted white;
     height: 500px;
   margin: 0 50%;
   }
-
-.again{
-   background-color: #F4B400;
-    border: none;
-    color: white;
-    padding: 12px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1em;
-    border-radius: 8px;
-    margin: 1em auto;
-}
 
 .buttons{
   display: flex;
@@ -797,16 +761,5 @@ margin: 0 0 -95px 199px;
 .chat_bubble_option:hover {
   border-bottom: 4px solid #F4B400;
 } 
-
-#playagain{
-   background-color: #F4B400;
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-size: 2em;
-    margin: 0 auto;
-    font-family: 'Pathway Gothic One', 'sans-serif';
-}
 
 }
