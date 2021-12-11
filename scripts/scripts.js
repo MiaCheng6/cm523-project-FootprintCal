@@ -1,10 +1,22 @@
 //Quiz
-const firstplay = document.getElementById("btn-play");
-const optionbus = document.getElementById("optionbus");
-const optioncar = document.getElementById("optioncar");
-const optionmetro = document.getElementById("optionmetro");
-const optionbike = document.getElementById("optionbike");
-const optionwalk = document.getElementById("optionwalk");
+let firstplay = document.getElementById("btn-play");
+let optionbus = document.getElementById("optionbus");
+let optioncar = document.getElementById("optioncar");
+let optionmetro = document.getElementById("optionmetro");
+let optionbike = document.getElementById("optionbike");
+let optionwalk = document.getElementById("optionwalk");
+
+//calculate tree number
+const CO2toTree = 22;
+const AvgCO2 = 234;
+let userSaveCo2 = 0;
+let allScore = 0;
+const CO2toCar = 6.4;
+const CO2toKwh = 0.43;
+const KwhtoPhone = 0.015;
+const CO2toCoffee = 0.00738;
+let fix = 1;
+const Percent = 100;
 
 firstplay.addEventListener("click", function() {
      showTrees(1);
@@ -90,6 +102,27 @@ optNone.addEventListener("click", function() {
      choose(5,'None');
 });
 
+
+const submitbtn = document.getElementById("submitbtn");
+const replay = document.getElementById("replay");
+const DifferenceWithAvg = document.querySelector("#diffavg");
+const desc = document.querySelector(".desc");
+const numberOfTrees = document.querySelector("#numtree");
+const desctree = document.querySelector("#desctree");
+const DisplayTrees = document.querySelector("#tree");
+const plantlevel = document.querySelector(".plantlevel");
+const numberOfCoffee = document.querySelector("#numcoffee");
+const numberOfCars = document.querySelector("#numcar");
+const numberOfPhones = document.querySelector("#numphone");
+let AllScore =  document.querySelector("#AllScore");
+
+submitbtn.addEventListener("click", function() {
+     submit();
+});
+replay.addEventListener("click", function() {
+     showTrees(0);
+});
+
 const options = {
     1:[
         {label:"Bus",score:100*4*270/10},       
@@ -171,7 +204,7 @@ function choose(key,value){
 
 function submit(){
     let answer = JSON.parse(localStorage.getItem("answer")||'{}');
-    let allScore = 0;
+   allScore = 0;
     for (let i in answer) {
         if(i==5){
             for (let j = 0; j < answer[i].length; j++) {
@@ -185,47 +218,20 @@ function submit(){
     console.log(answer);
     localStorage.setItem("lastAnswer",JSON.stringify(answer));
     this.showTrees(6);
+  
+  userSaveCo2 = AvgCO2 - allScore/100;
+  
+ShowAllScore();
+calculateTrees();
+calculateDiffAvg();
+calculateResults();
+calculateLevels();
+//showbarchart();
+calculateCoffee();
+calculateCars();
+calculateChargePhone();
 }
 
-//Result
-const submitbtn = document.getElementById("submitbtn");
-
-submitbtn.addEventListener("click", function() {
-     submit();
-});
-
-const replay = document.getElementById("replay");
-const DifferenceWithAvg = document.querySelector("#diffavg");
-const desc = document.querySelector(".desc");
-const numberOfTrees = document.querySelector("#numtree");
-const desctree = document.querySelector("#desctree");
-const DisplayTrees = document.querySelector("#tree");
-const plantlevel = document.querySelector(".plantlevel");
-const numberOfCoffee = document.querySelector("#numcoffee");
-const numberOfCars = document.querySelector("#numcar");
-const numberOfPhones = document.querySelector("#numphone");
-const AllScore =  document.querySelector("#AllScore");
-
-
-replay.addEventListener("click", function() {
-     showTrees(0);
-});
-
-//cal the user score
-
-let answer = JSON.parse(localStorage.getItem("answer")||'{}');
-let allScore = 0;
-    for (let i in answer) {
-        if(i==5){
-            for (let j = 0; j < answer[i].length; j++) {
-                allScore+= options[i].find(item=>item.label==answer[i][j]).score;
-            }
-        }else{
-            allScore += options[i].find(item=>item.label==answer[i][0]).score;
-        }
-    }
-answer.allScore = allScore;
-console.log(allScore);
 
 //show allscore
 function ShowAllScore(){
@@ -235,10 +241,6 @@ function ShowAllScore(){
 ShowAllScore();
 
 //calculate tree number
-const CO2toTree = 22;
-const AvgCO2 = 234;
-let userSaveCo2 = AvgCO2 - allScore/100;
-
 function calculateTrees(){
 numtree.textContent = 
 Math.abs(Math.round(userSaveCo2 / CO2toTree));
@@ -273,14 +275,12 @@ function treeDisc() {
 treeDisc();
 
 //cal the difference of CO2 between user and avg
-const Percent = 100;
-
 function calculateDiffAvg(){
 diffavg.textContent = Math.abs(Math.round(
 ((userSaveCo2) / AvgCO2) * Percent));
     }
 
-calculateDiffAvg();
+
 
 // display results
 let high = '% higher than avg';
@@ -297,11 +297,11 @@ function calculateResults() {
 }
 }
 
-calculateResults();
 
 // display levels
-let finalscore = allScore/100;
+
 function calculateLevels() {
+  let finalscore = allScore/100;
        if ( 0 < finalscore && finalscore < 68){
        plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://cdn.cloudflare.steamstatic.com/steam/apps/555150/ss_2435c1322e6f25bfeed33b8544d7a941e7579e72.jpg?t=1602532571' width='100%'/><h4>Challenger</h4></div>";
     }  else if ( 68 < finalscore && finalscore  < 116 ){
@@ -323,13 +323,30 @@ function calculateLevels() {
     }
 }
 
-calculateLevels();
 
 //display bar chart
+
+function showbarchart() {
+    let answer = JSON.parse(localStorage.getItem("answer")||'{}');
+   allScore = 0;
+    for (let i in answer) {
+        if(i==5){
+            for (let j = 0; j < answer[i].length; j++) {
+                allScore+= options[i].find(item=>item.label==answer[i][j]).score;
+            }
+        }else{
+            allScore += options[i].find(item=>item.label==answer[i][0]).score;
+        }
+    }
+    answer.allScore = allScore;
+    console.log(answer);
+    localStorage.setItem("lastAnswer",JSON.stringify(answer));
+    this.showTrees(6);
+  
 let data = [
   {
     x: ['Transport','Shopping habit','Energy consumption','Diet preference',  'Recycle'],
-    y: [options[1].find(item=>item.label==answer[1][0]).score*10, options[2].find(item=>item.label==answer[2][0]).score*10, options[3].find(item=>item.label==answer[3][0]).score*10, options[4].find(item=>item.label==answer[4][0]).score*10, options[5].find(item=>item.label==answer[5][0]).score*10],
+   y: [options[1].find(item=>item.label==answer[1][0]).score*10, options[2].find(item=>item.label==answer[2][0]).score*10, options[3].find(item=>item.label==answer[3][0]).score*10, options[4].find(item=>item.label==answer[4][0]).score*10, options[5].find(item=>item.label==answer[5][0]).score*10],
     type: 'bar',
      marker: {
     color: '#367d7d'
@@ -342,19 +359,16 @@ title: 'Details of Your Carbon Footprint_CO2/g'
 };
 
 Plotly.newPlot("barchart", data, layout);
-
-
 let barchart = document.getElementById("barchart");
 function chartlayout () { 
     barchart.style.backgroundColor = "white";       
     barchart.style.width = "100%";        
 }
-chartlayout();
+chartlayout();}
 
+
+  
 //cal the coffee number
-const CO2toCoffee = 0.00738;
-let fix = 1;
-
 function calculateCoffee() {
     if ( userSaveCo2 > 0 ){
       numcoffee.textContent = Math.abs(Math.round(userSaveCo2 / CO2toCoffee));
@@ -365,12 +379,8 @@ function calculateCoffee() {
     }
 }
 
-calculateCoffee();
 
 //cal the cars number
-const CO2toCar = 6.4;
-const CO2toKwh = 0.43;
-
 function calculateCars() {
     if ( userSaveCo2 > 0 ){
     numcar.textContent = Math.abs(Math.round((userSaveCo2 / CO2toKwh) * CO2toCar));
@@ -381,11 +391,7 @@ function calculateCars() {
     }
 }
 
-calculateCars();
-
 //cal the phone charging times
-const KwhtoPhone = 0.015;
-
 function calculateChargePhone() {
     if ( userSaveCo2 > 0 ){
     numphone.textContent = Math.abs((Math.round((userSaveCo2 / CO2toKwh) / KwhtoPhone)));
@@ -395,6 +401,6 @@ function calculateChargePhone() {
  numphone.textContent = Math.abs((Math.round(((userSaveCo2+fix) / CO2toKwh) / KwhtoPhone)));
     } 
 }
-calculateChargePhone();
+
 
 
