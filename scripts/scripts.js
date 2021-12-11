@@ -266,9 +266,9 @@ Math.abs(Math.round(userSaveCo2 / CO2toTree));
 function addTrees(){
 for (let i = 0; i < numtree.textContent; i++) {
    if (userSaveCo2 > 0){
-         DisplayTrees.innerHTML += "<img src='https://cdn-icons-png.flaticon.com/512/877/877802.png' width='20%'/>";
+         DisplayTrees.innerHTML += "<img src='images/savetree.png' width='20%'/>";
     } else {
-      DisplayTrees.innerHTML += "<img src='https://cdn4.iconfinder.com/data/icons/climate-change-filloutline/64/Dead-tree-withered-die-leafless-1024.png' width='20%'/>";
+      DisplayTrees.innerHTML += "<img src='images/killtree.png' width='20%'/>";
     } 
 }
 }
@@ -310,23 +310,23 @@ function calculateResults() {
 function calculateLevels() {
   let finalscore = allScore/100;
        if ( 0 < finalscore && finalscore < 68){
-       plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://cdn.cloudflare.steamstatic.com/steam/apps/555150/ss_2435c1322e6f25bfeed33b8544d7a941e7579e72.jpg?t=1602532571' width='100%'/><h4>Challenger</h4></div>";
+       plantlevel.innerHTML = "<div style='text-align:center;'><img src='images/Challenger.jpeg' width='100%'/><h4>Challenger</h4></div>";
     }  else if ( 68 < finalscore && finalscore  < 116 ){
-       plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://play-lh.googleusercontent.com/goQcAZnIKxZOVMDWwvYB_xtYKB9iRZ49W_j0MoMxZDWk9hTOiLeLHFD5LD6mOrSYyKk=w2548-h1174-rw' width='100%'/><h4>Grandmaster</h4>";
+       plantlevel.innerHTML = "<div style='text-align:center;'><img src='images/Grandmaster.jpeg' width='100%'/><h4>Grandmaster</h4>";
     }  else if ( 116 < finalscore && finalscore  < 164 ){
-       plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://saveorquit.com/wp-content/uploads/2020/11/TFT-Deer.jpg' width='100%'/><h4>Master</h4>";
+       plantlevel.innerHTML = "<div style='text-align:center;'><img src='images/Master.jpeg' width='100%'/><h4>Master</h4>";
     } else if ( 212 < finalscore && finalscore < 260 ){
-       plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://saveorquit.com/wp-content/uploads/2020/11/TFT-The-Tree.jpg' width='100%'/><h4>Bright Diamond</h4>";
+       plantlevel.innerHTML = "<div style='text-align:center;'><img src='images/Bright Diamond.jpeg' width='100%'/><h4>Bright Diamond</h4>";
     } else if ( 260 < finalscore && finalscore < 308 ){
-       plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://images.igdb.com/igdb/image/upload/t_original/ar598.jpg' width='100%'/><h4>Luxurious Platinum</h4>";
+       plantlevel.innerHTML = "<div style='text-align:center;'><img src='images/Luxurious Platinum.jpeg' width='100%'/><h4>Luxurious Platinum</h4>";
     } else if ( 164 < finalscore && finalscore < 212 ){
-       plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://cdn.cloudflare.steamstatic.com/steam/apps/555150/ss_562599cf35261934bb3d5475991e1058b22943c1.jpg?t=1602532571' width='100%'/><h4>The Glory of the Gold</h4>";
+       plantlevel.innerHTML = "<div style='text-align:center;'><img src='images/The Glory of the Gold.jpeg' width='100%'/><h4>The Glory of the Gold</h4>";
     } else if ( 308 < finalscore && finalscore < 356 ){
-       plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://cdn.cloudflare.steamstatic.com/steam/apps/555150/ss_71c6db6b8b151d26ddd9f263d1343be4506208d5.jpg?t=1602532571' width='100%'/><h4>Unyielding Silver</h4>";
+       plantlevel.innerHTML = "<div style='text-align:center;'><img src='images/Unyielding Silver.jpeg' width='100%'/><h4>Unyielding Silver</h4>";
     } else if ( 356 < finalscore && finalscore < 404 ){
-       plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://images.igdb.com/igdb/image/upload/t_original/jixmwgycu4d7wmpxvtpb.jpg' width='100%'/><h4>The Heroic Bronze</h4>";
+       plantlevel.innerHTML = "<div style='text-align:center;'><img src='images/The Heroic Bronze.jpeg' width='100%'/><h4>The Heroic Bronze</h4>";
     } else{
-       plantlevel.innerHTML = "<div style='text-align:center;'><img src='https://images.igdb.com/igdb/image/upload/t_original/sc6w7i.jpg' width='100%'/><h4>Iron</h4>";
+       plantlevel.innerHTML = "<div style='text-align:center;'><img src='images/Iron.jpeg' width='100%'/><h4>Iron</h4>";
     }
 }
 

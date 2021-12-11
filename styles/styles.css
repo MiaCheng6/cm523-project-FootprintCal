@@ -49,7 +49,7 @@ html,body{
 
 }
 .index_picture{
-    background-image:url('https://cdn-icons-png.flaticon.com/512/877/877802.png'); 
+    background:url(../images/savetree.png);
     background-size: 300px;
     background-repeat: no-repeat;
    background-position: center;
@@ -214,7 +214,7 @@ html,body{
     position: relative;
 }
 .shovel1 {
-  background-image:url('https://cdn3.iconfinder.com/data/icons/gardening-132/64/33-Digging-1024.png'); 
+  background-image:url(../images/progressbar.png);
     background-size: 50px;
     background-repeat: no-repeat;
     width: 100%;
@@ -225,7 +225,7 @@ html,body{
     border-radius:50px；
 }
 .shovel2{
-  background-image:url('https://cdn3.iconfinder.com/data/icons/gardening-132/64/33-Digging-1024.png'); 
+  background-image:url(../images/progressbar.png);
     background-size: 50px;
     background-repeat: repeat-x;
     width: 100px;
@@ -237,7 +237,7 @@ html,body{
 }
 
 .shovel3{
-  background-image:url('https://cdn3.iconfinder.com/data/icons/gardening-132/64/33-Digging-1024.png'); 
+  background-image:url(../images/progressbar.png);
     background-size: 50px;
     background-repeat: repeat-x;
     width: 150px;
@@ -248,7 +248,7 @@ html,body{
     border-radius:50px；
 }
 .shovel4{
-  background-image:url('https://cdn3.iconfinder.com/data/icons/gardening-132/64/33-Digging-1024.png'); 
+  background-image:url(../images/progressbar.png);
     background-size: 50px;
     background-repeat: repeat-x;
     width: 200px;
@@ -259,7 +259,7 @@ html,body{
     border-radius: 50px;
 }
 .shovel5{
-  background-image:url('https://cdn3.iconfinder.com/data/icons/gardening-132/64/33-Digging-1024.png'); 
+  background-image:url(../images/progressbar.png);
     background-size: 50px;
     background-repeat: repeat-x;
     width: 250px;
@@ -426,7 +426,7 @@ margin: 65px 0 50px 396px;
   margin: -800px 0 0 400px;
 }
 #coffee svg {
-  background-image: url("https://cdn0.iconfinder.com/data/icons/good-morning-1/128/morning_cute_tea_coffee_cup_hot-512.png");
+  background-image: url(../images/coffee.png);
    background-size: 200px;
    background-repeat: no-repeat;
    margin: 0 0 0 50px;
@@ -449,7 +449,7 @@ margin: 65px 0 50px 396px;
 }
 
 #car svg{
-  background-image: url("https://cdn1.iconfinder.com/data/icons/family-life-filled-outline/340/travel_car_summer_vacation_trip_road_drive_vehicle_journey_adventure_holiday-512.png");
+  background-image: url(../images/car.png);
    background-size: 150px;
    background-repeat: no-repeat;
    background-position: right;
@@ -471,7 +471,7 @@ margin: 65px 0 50px 396px;
 }
 
 #phone svg{
-   background-image: url("https://cdn1.iconfinder.com/data/icons/mobile-colored/96/phone_charge_battery_96-1024.png");
+   background-image: url(../images/phone.png);
    background-size: 200px;
    background-repeat: no-repeat;
    background-position: left;
@@ -689,7 +689,6 @@ margin: 0 0 -95px 199px;
 } 
 
 #coffee svg {
-  background-image: url("https://cdn0.iconfinder.com/data/icons/good-morning-1/128/morning_cute_tea_coffee_cup_hot-512.png");
    background-size: 100px;
    background-repeat: no-repeat;
    margin: 50px 0 0 65px;
@@ -711,7 +710,6 @@ margin: 0 0 -95px 199px;
 } 
 
 #car svg{
-  background-image: url("https://cdn1.iconfinder.com/data/icons/family-life-filled-outline/340/travel_car_summer_vacation_trip_road_drive_vehicle_journey_adventure_holiday-512.png");
     background-size:90px;
    background-repeat: no-repeat;
    background-position: left;
@@ -733,7 +731,6 @@ margin: 0 0 -95px 199px;
 }  
   
 #phone svg{
-   background-image: url("https://cdn1.iconfinder.com/data/icons/mobile-colored/96/phone_charge_battery_96-1024.png");
    background-size:115px;
    background-repeat: no-repeat;
    margin: 0 0 0 58px;
