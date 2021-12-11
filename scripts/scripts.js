@@ -90,16 +90,6 @@ optNone.addEventListener("click", function() {
      choose(5,'None');
 });
 
-const submitbtn = document.getElementById("submitbtn");
-submitbtn.addEventListener("click", function() {
-     submit();
-});
-
-const replay = document.getElementById("replay");
-replay.addEventListener("click", function() {
-     showTrees(0);
-});
-
 let options = {
     1:[
         {label:"Bus",score:100*4*270/10},       
@@ -193,12 +183,18 @@ function submit(){
     }
     answer.allScore = allScore;
   console.log(answer);
-  console.log(data);
     localStorage.setItem("lastAnswer",JSON.stringify(answer));
     this.showTrees(6);
 }
 
 //Result
+const submitbtn = document.getElementById("submitbtn");
+
+submitbtn.addEventListener("click", function() {
+     submit();
+});
+
+const replay = document.getElementById("replay");
 const DifferenceWithAvg = document.querySelector("#diffavg");
 const desc = document.querySelector(".desc");
 const numberOfTrees = document.querySelector("#numtree");
@@ -210,6 +206,10 @@ const numberOfCars = document.querySelector("#numcar");
 const numberOfPhones = document.querySelector("#numphone");
 const AllScore =  document.querySelector("#AllScore");
 
+
+replay.addEventListener("click", function() {
+     showTrees(0);
+});
 
 //cal the user score
 let answer = JSON.parse(localStorage.getItem("answer")||'{}');
@@ -254,7 +254,7 @@ for (let i = 0; i < numtree.textContent; i++) {
 addTrees();
 
 //display tree disc
-let bad = 'Oh! You killed';
+let bad = 'Ow! You killed';
 let good = 'Congrats! You saved';
 
 function treeDisc() {
@@ -326,7 +326,7 @@ let data = [
 x: ['Transport','Shopping habit','Energy consumption','Diet preference',  'Recycle'],
 y: [options[1].find(item=>item.label==answer[1][0]).score*10, options[2].find(item=>item.label==answer[2][0]).score*10, options[3].find(item=>item.label==answer[3][0]).score*10, options[4].find(item=>item.label==answer[4][0]).score*10, options[5].find(item=>item.label==answer[5][0]).score*10],
 type: 'bar',
- marker: {
+marker: {
 color: '#367d7d'
 }
 }
