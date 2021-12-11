@@ -90,7 +90,7 @@ optNone.addEventListener("click", function() {
      choose(5,'None');
 });
 
-let options = {
+const options = {
     1:[
         {label:"Bus",score:100*4*270/10},       
       {label:"Car",score:300*4*270/10},
@@ -182,7 +182,7 @@ function submit(){
         }
     }
     answer.allScore = allScore;
-  console.log(answer);
+    console.log(answer);
     localStorage.setItem("lastAnswer",JSON.stringify(answer));
     this.showTrees(6);
 }
@@ -212,6 +212,7 @@ replay.addEventListener("click", function() {
 });
 
 //cal the user score
+
 let answer = JSON.parse(localStorage.getItem("answer")||'{}');
 let allScore = 0;
     for (let i in answer) {
@@ -247,7 +248,11 @@ calculateTrees();
 //display trees
 function addTrees(){
 for (let i = 0; i < numtree.textContent; i++) {
-    DisplayTrees.innerHTML += "<img src='https://cdn-icons-png.flaticon.com/512/877/877802.png' width='20%'/>";
+   if (userSaveCo2 > 0){
+         DisplayTrees.innerHTML += "<img src='https://cdn-icons-png.flaticon.com/512/877/877802.png' width='20%'/>";
+    } else {
+      DisplayTrees.innerHTML += "<img src='https://cdn4.iconfinder.com/data/icons/climate-change-filloutline/64/Dead-tree-withered-die-leafless-1024.png' width='20%'/>";
+    } 
 }
 }
 
@@ -322,14 +327,14 @@ calculateLevels();
 
 //display bar chart
 let data = [
-{
-x: ['Transport','Shopping habit','Energy consumption','Diet preference',  'Recycle'],
-y: [options[1].find(item=>item.label==answer[1][0]).score*10, options[2].find(item=>item.label==answer[2][0]).score*10, options[3].find(item=>item.label==answer[3][0]).score*10, options[4].find(item=>item.label==answer[4][0]).score*10, options[5].find(item=>item.label==answer[5][0]).score*10],
-type: 'bar',
-marker: {
-color: '#367d7d'
-}
-}
+  {
+    x: ['Transport','Shopping habit','Energy consumption','Diet preference',  'Recycle'],
+    y: [options[1].find(item=>item.label==answer[1][0]).score*10, options[2].find(item=>item.label==answer[2][0]).score*10, options[3].find(item=>item.label==answer[3][0]).score*10, options[4].find(item=>item.label==answer[4][0]).score*10, options[5].find(item=>item.label==answer[5][0]).score*10],
+    type: 'bar',
+     marker: {
+    color: '#367d7d'
+  }
+  }
 ];
 
 let layout = {
