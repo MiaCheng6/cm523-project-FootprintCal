@@ -6,7 +6,6 @@ let optionmetro = document.getElementById("optionmetro");
 let optionbike = document.getElementById("optionbike");
 let optionwalk = document.getElementById("optionwalk");
 
-//calculate tree number
 const CO2toTree = 22;
 const AvgCO2 = 234;
 let userSaveCo2 = 0;
@@ -23,18 +22,23 @@ firstplay.addEventListener("click", function() {
 });
 optionbus.addEventListener("click", function() {
      showTrees(2);
+     choose(5, 'Bus');
 });
 optioncar.addEventListener("click", function() {
      showTrees(2);
+     choose(5, 'Car');
 });
 optionmetro.addEventListener("click", function() {
      showTrees(2);
+     choose(5, 'Metro');
 });
 optionbike.addEventListener("click", function() {
      showTrees(2);
+     choose(5, 'Bike');
 });
 optionwalk.addEventListener("click", function() {
      showTrees(2);
+     choose(5, 'Walk');
 });
 
 
@@ -44,12 +48,15 @@ const optNotconsider = document.getElementById("optNotconsider");
 
 optAlways.addEventListener("click", function() {
      showTrees(3);
+     choose(5, 'Always');
 });
 optSometimes.addEventListener("click", function() {
      showTrees(3);
+      choose(5, 'Sometimes');
 });
 optNotconsider.addEventListener("click", function() {
      showTrees(3);
+     choose(5, 'Not considering this option');
 });
 
 const optYes = document.getElementById("optYes");
@@ -57,9 +64,11 @@ const optNo = document.getElementById("optNo");
 
 optYes.addEventListener("click", function() {
      showTrees(4);
+     choose(5, 'Yes');
 });
 optNo.addEventListener("click", function() {
      showTrees(4);
+     choose(5, 'No');
 });
 
 const optOne = document.getElementById("optOne");
@@ -68,12 +77,15 @@ const optThree = document.getElementById("optThree");
 
 optOne.addEventListener("click", function() {
      showTrees(5);
+     choose(5, 'One');
 });
 optTwo.addEventListener("click", function() {
      showTrees(5);
+     choose(5, 'Two');
 });
 optThree.addEventListener("click", function() {
      showTrees(5);
+     choose(5, 'Three or more');
 });
 
 const optFood = document.getElementById("optFood");
@@ -199,16 +211,20 @@ function choose(key,value){
         answer[key] = [value];
         this.showTrees(key+1);
     }
+    console.log(key, value);
+    console.log(answer);
     localStorage.setItem("answer",JSON.stringify(answer));
 }
 
 function submit(){
     let answer = JSON.parse(localStorage.getItem("answer")||'{}');
    allScore = 0;
+  console.log(options,answer);
     for (let i in answer) {
         if(i==5){
             for (let j = 0; j < answer[i].length; j++) {
-                allScore+= options[i].find(item=>item.label==answer[i][j]).score;
+              console.log('j', options[j+1]);
+                allScore+= options[j+1].find(item=>item.label==answer[i][j]).score;
             }
         }else{
             allScore += options[i].find(item=>item.label==answer[i][0]).score;
@@ -226,10 +242,12 @@ calculateTrees();
 calculateDiffAvg();
 calculateResults();
 calculateLevels();
-//showbarchart();
 calculateCoffee();
 calculateCars();
 calculateChargePhone();
+addTrees();
+//showchart();
+treeDisc();
 }
 
 
@@ -238,14 +256,11 @@ function ShowAllScore(){
    AllScore.textContent = allScore/100;
 }
 
-ShowAllScore();
-
 //calculate tree number
 function calculateTrees(){
 numtree.textContent = 
 Math.abs(Math.round(userSaveCo2 / CO2toTree));
     }
-calculateTrees();
 
 //display trees
 function addTrees(){
@@ -257,8 +272,6 @@ for (let i = 0; i < numtree.textContent; i++) {
     } 
 }
 }
-
-addTrees();
 
 //display tree disc
 let bad = 'Ow! You killed';
@@ -272,15 +285,11 @@ function treeDisc() {
     } 
 }
 
-treeDisc();
-
-//cal the difference of CO2 between user and avg
+// cal the difference of CO2 between user and avg
 function calculateDiffAvg(){
 diffavg.textContent = Math.abs(Math.round(
 ((userSaveCo2) / AvgCO2) * Percent));
     }
-
-
 
 // display results
 let high = '% higher than avg';
@@ -297,9 +306,7 @@ function calculateResults() {
 }
 }
 
-
 // display levels
-
 function calculateLevels() {
   let finalscore = allScore/100;
        if ( 0 < finalscore && finalscore < 68){
@@ -323,16 +330,17 @@ function calculateLevels() {
     }
 }
 
-
+/*
 //display bar chart
-
-function showbarchart() {
-    let answer = JSON.parse(localStorage.getItem("answer")||'{}');
+function showchart(){
+   let answer = JSON.parse(localStorage.getItem("answer")||'{}');
    allScore = 0;
+  console.log(options,answer);
     for (let i in answer) {
         if(i==5){
             for (let j = 0; j < answer[i].length; j++) {
-                allScore+= options[i].find(item=>item.label==answer[i][j]).score;
+              console.log('j', options[j+1]);
+                allScore+= options[j+1].find(item=>item.label==answer[i][j]).score;
             }
         }else{
             allScore += options[i].find(item=>item.label==answer[i][0]).score;
@@ -346,9 +354,10 @@ function showbarchart() {
 let data = [
   {
     x: ['Transport','Shopping habit','Energy consumption','Diet preference',  'Recycle'],
-   y: [options[1].find(item=>item.label==answer[1][0]).score*10, options[2].find(item=>item.label==answer[2][0]).score*10, options[3].find(item=>item.label==answer[3][0]).score*10, options[4].find(item=>item.label==answer[4][0]).score*10, options[5].find(item=>item.label==answer[5][0]).score*10],
+   y: [
+options[1].find(item=>item.label==answer[1][0]).score*10, options[2].find(item=>item.label==answer[2][0]).score*10, options[3].find(item=>item.label==answer[3][0]).score*10, options[4].find(item=>item.label==answer[4][0]).score*10, options[5].find(item=>item.label==answer[5][0]).score*10],
     type: 'bar',
-     marker: {
+    marker: {
     color: '#367d7d'
   }
   }
@@ -359,15 +368,17 @@ title: 'Details of Your Carbon Footprint_CO2/g'
 };
 
 Plotly.newPlot("barchart", data, layout);
+
+
 let barchart = document.getElementById("barchart");
 function chartlayout () { 
     barchart.style.backgroundColor = "white";       
     barchart.style.width = "100%";        
 }
 chartlayout();}
+*/
 
 
-  
 //cal the coffee number
 function calculateCoffee() {
     if ( userSaveCo2 > 0 ){
@@ -401,6 +412,3 @@ function calculateChargePhone() {
  numphone.textContent = Math.abs((Math.round(((userSaveCo2+fix) / CO2toKwh) / KwhtoPhone)));
     } 
 }
-
-
-
